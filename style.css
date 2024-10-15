@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1c1c1c;
+    color: #E0E0E0;
+    font-family: "Playfair Display", serif;
+
+}
+
+/* Basic Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1c1c1c;
+    color: #E0E0E0;
+    margin: 20px;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+
+}
+
+#header-logo img {
+    width: 100px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+}
+
+nav ul li {
+    cursor: pointer;
+    font-size: 18px;
+    font-size: 1.3rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #E0E0E0;
+    text-transform: uppercase;
+}
+
+.link-116 {
+    color: #E0E0E0;
+
+    text-decoration: none;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.link-116::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: #E0E0E0;
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+.link-116:hover::after {
+    width: 100%;
+    animation: heartbeat116 1.75s infinite;
+}
+
+nav li a:hover {
+    color: #FF6D00;
+}
+
+.menu-icon {
+    display: none;
+}
+
+#close-icon {
+    display: none;
+    /* Hide icons on larger screens */
+}
+
+@keyframes heartbeat116 {
+
+    0%,
+    100% {
+        width: 100%;
+    }
+
+    50% {
+        width: 60%;
+    }
+}
+
+/* style.css */
+
+/* Initially hide the menu for smaller screens */
+#menu.hidden {
+    display: none;
+}
+
+/* Show the menu when active */
+#menu.active {
+    display: block;
+}
+
+/* Optional: Style the navigation for larger screens */
+@media (min-width: 768px) {
+    #menu {
+        display: flex !important;
+        /* Override the hidden class */
+    }
+
+    #menu-icon,
+    #close-icon {
+        display: none;
+        /* Hide icons on larger screens */
+    }
+
+}
+
+/* Additional styling for smooth transitions (optional) */
+#menu {
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+
+
+
+/* Tablet screen (up to 768px) */
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #121212;
+        color: #E0E0E0;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 40vw;
+        padding: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px;
+    }
+
+    .ss {
+        margin-top: 20px;
+    }
+}
+
+/* Mobile screen (up to 480px) */
+@media screen and (max-width: 480px) {
+    nav ul li {
+        font-size: 14px;
+    }
+
+    #header-logo img {
+        width: 80px;
+    }
+
+    .ss {
+        margin-top: 20px;
+    }
+}
