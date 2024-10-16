@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 
 * {
     margin: 0;
-    border: 0;
     padding: 0;
     list-style: none;
     box-sizing: border-box;
@@ -12,12 +11,12 @@
 body {
     background-color: #1c1c1c;
     color: #E0E0E0;
-    font-family: "Playfair Display", serif;
-
+    font-family: "EB Garamond", serif;
 }
 
 /* Basic Styling */
 header {
+    font-family: "Playfair Display", serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,26 +26,21 @@ header {
     margin: 20px;
     border-radius: 12px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-
 }
 
-#header-logo img {
-    width: 100px;
+#header-logo h1 {
+    font-size: 3rem;
+    letter-spacing: 5px;
 }
 
 nav ul {
-    list-style-type: none;
     display: flex;
     gap: 25px;
-    margin: 0;
-    padding: 0;
-    font-size: 2rem;
 }
 
 nav ul li {
     cursor: pointer;
     font-size: 18px;
-    font-size: 1.3rem;
 }
 
 nav ul li a {
@@ -56,10 +50,6 @@ nav ul li a {
 }
 
 .link-116 {
-    color: #E0E0E0;
-
-    text-decoration: none;
-
     position: relative;
     overflow: hidden;
 }
@@ -77,118 +67,162 @@ nav ul li a {
 
 .link-116:hover::after {
     width: 100%;
-    animation: heartbeat116 1.75s infinite;
 }
 
-nav li a:hover {
-    color: #FF6D00;
+#slider img {
+   
+    border-radius: 12px;
 }
 
-.menu-icon {
-    display: none;
+#hometext {
+    text-align: center;
 }
 
-#close-icon {
-    display: none;
-    /* Hide icons on larger screens */
+#hometext h2 {
+    font-size: 2.2rem;
+    font-weight: 400;
 }
 
-@keyframes heartbeat116 {
+#cta {
+    padding: 10px;
+    border-radius: 7px;
+    background-color: #1c1c1c;
+    color: #E0E0E0;
+    border: 2px solid #E0E0E0;
+    margin-top: 10px;
+    cursor: pointer;
+}
 
-    0%,
-    100% {
-        width: 100%;
+#home {
+    padding: 10px;
+    background-color: #cfcfcf;
+    color: #3B3333;
+    margin: 20px;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+/* Larger screens */
+@media (min-width: 1200px) {
+    body {
+        font-size: 1.125rem;
     }
 
-    50% {
-        width: 60%;
-    }
-}
-
-/* style.css */
-
-/* Initially hide the menu for smaller screens */
-#menu.hidden {
-    display: none;
-}
-
-/* Show the menu when active */
-#menu.active {
-    display: block;
-}
-
-/* Optional: Style the navigation for larger screens */
-@media (min-width: 768px) {
     #menu {
         display: flex !important;
-        /* Override the hidden class */
     }
 
     #menu-icon,
     #close-icon {
         display: none;
-        /* Hide icons on larger screens */
+    }
+
+    #home {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
     }
 
 }
 
-/* Additional styling for smooth transitions (optional) */
-#menu {
-    transition: all 0.3s ease-in-out;
+/* 768 to 1200 */
+
+@media (min-width: 768px) {
+    body {
+        font-size: 1rem;
+    }
+
+    #menu {
+        display: flex !important;
+    }
+
+    #menu-icon,
+    #close-icon {
+        display: none;
+    }
+
+    #home {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+    }
+    
+    
 }
 
-
-
-
-
-
-/* Tablet screen (up to 768px) */
+/* Tablets */
 @media screen and (max-width: 768px) {
+    body {
+        font-size: 0.8rem;
+    }
+#home
+{
+    display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+        flex-direction: column; 
+}
     nav ul {
         display: none;
         flex-direction: column;
-        gap: 10px;
         background-color: #121212;
-        color: #E0E0E0;
         position: absolute;
         top: 20px;
         right: 20px;
-        width: 40vw;
+        width: 100vw;
         padding: 10px;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         border-radius: 12px;
-
+        height: 96%;
+        text-align: center;
     }
 
     #menu-icon {
         display: block;
     }
 
-
     nav ul.show {
         display: flex;
     }
 
-    nav ul li {
-        margin: 10px;
+    #header-logo h1 {
+        font-size: 2rem;
     }
 
-    .ss {
-        margin-top: 20px;
-    }
+ 
 }
 
-/* Mobile screen (up to 480px) */
+/* Mobile screens */
 @media screen and (max-width: 480px) {
+    body {
+        font-size: 0.6rem;
+    }
+    #home
+    {
+        display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 50px;
+            flex-direction: column; 
+    }
+    nav ul {
+        width: 100vw;
+        text-align: center;
+    }
+
     nav ul li {
         font-size: 14px;
+        margin: 30px 10px;
     }
 
-    #header-logo img {
-        width: 80px;
+    #header-logo h1 {
+        font-size: 1.6rem;
     }
 
-    .ss {
-        margin-top: 20px;
-    }
+   
 }
+
+
