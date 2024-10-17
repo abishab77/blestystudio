@@ -7,18 +7,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to open the menu
     const openMenu = () => {
-        menu.classList.remove('hidden');
         menu.classList.add('active');
         menuIcon.style.display = 'none';
         closeIcon.style.display = 'block';
+        // Prevent scrolling when menu is open
+        document.body.style.overflow = 'hidden';
     };
 
     // Function to close the menu
     const closeMenu = () => {
         menu.classList.remove('active');
-        menu.classList.add('hidden');
-        closeIcon.style.display = 'none';
         menuIcon.style.display = 'block';
+        closeIcon.style.display = 'none';
+        // Restore scrolling
+        document.body.style.overflow = 'auto';
     };
 
     // Event listener for menu icon click
@@ -27,12 +29,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // Event listener for close icon click
     closeIcon.addEventListener('click', closeMenu);
 
-    // Optional: Close the menu when clicking outside of it
+    // Close the menu when clicking outside of it
     document.addEventListener('click', (event) => {
         if (!menu.contains(event.target) && !menuIcon.contains(event.target) && !closeIcon.contains(event.target)) {
             if (menu.classList.contains('active')) {
                 closeMenu();
             }
         }
+    });
+
+    // Optional: Close the menu when a menu link is clicked (useful for single-page applications)
+    const menuLinks = document.querySelectorAll('#menu a');
+    menuLinks.forEach(link => {
+        link.addEventListener('click', closeMenu);
     });
 });
