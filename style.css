@@ -123,7 +123,7 @@ nav ul li a {
 }
 
 #slider img {
-    width: 500px;
+    width: 300px;
     height: 400px;
 }
 
@@ -172,6 +172,7 @@ nav ul li a {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    
 }
 
 
@@ -189,10 +190,13 @@ nav ul li a {
 #socials {
     display: flex;
     justify-content: space-around;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 20px;
 }
 .icons {
-    margin-right: 10px; /* Adds space between the icon and text */
+    margin-right: 10px;
+    font-size: 1.4rem;
+    /* Adds space between the icon and text */
 }
 
 /* Ensure the underline appears only on the text of the email link */
@@ -246,20 +250,125 @@ button {
     cursor: pointer;
     margin-top: 20px;
 }
+#followus
+{
+    display: flex;
+    justify-content: space-around;
+    gap:10px;
+}
+#social-header
+{
+    font-size: 1.6rem;
+    text-align: center;
+}
 
 
+/* about us */
+#aboutus
+{
+    padding: 10px;
+    margin: 20px;
+    border-radius: var(--border-b);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    background-color: var(--quaternary-color);
+    color: var(--tertiary-color);
 
+}
+
+#aboutus h2
+{
+    text-align: center;
+
+}
+.about-text
+{
+    text-align: left;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    font-family: var(--primary-font);
+}
+.hidee
+{
+    display:none;
+}
+#subscription
+{
+   
+    margin: 5px;
+    text-align: center;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+#subscription input,button
+{
+    
+    width: 350px;
+    border-radius: 0;
+    border: none;
+    padding: 5px;
+    border: none;
+    height: 40px;
+
+
+}
+
+#subscription input:hover
+{
+    border: 1px solid;
+}
+#subscription button:hover
+{
+    color:#1c1c1c ;
+    background-color: #ff6d00;
+}
+
+
+#subs-btn
+{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    cursor: pointer;
+    margin: 0;
+    border-radius: 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-family: var(--primary-font);
+    font-size: 1rem;
+    
+
+   
+}
+#subs-input
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+   
+    margin: 10px auto;
+}
+#subscription input::placeholder
+{
+    font-family: var(--primary-font);
+}
 
 #close-icon {
     float: right;
     margin: 30px auto;
 }
 
+
+
+
+
+
 /* icons */
 
 
 /* media queries */
-/* Larger screens */
+/* Larger screens  above 1200px*/
 @media (min-width: 1200px) {
     body {
         font-size: 1.3rem;
@@ -281,6 +390,13 @@ button {
         gap: 50px;
     }
 
+    /* contact */
+    .con-text p
+    {
+        text-align: center;
+        font: size 1.4rem;
+    }
+
 
 }
 
@@ -288,7 +404,7 @@ button {
 
 @media (min-width: 768px) {
     body {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 
     #menu {
@@ -306,6 +422,12 @@ button {
         align-items: center;
         gap: 50px;
     }
+     /* contact */
+     .con-text p
+     {
+         text-align: center;
+         font: size 1.2rem;
+     }
 
 
 }
@@ -313,7 +435,7 @@ button {
 /* Tablets */
 @media screen and (max-width: 768px) {
     body {
-        font-size: 0.9rem;
+        font-size: 1.5rem;
     }
 
     #home {
@@ -330,8 +452,9 @@ button {
         background-color: #121212;
         position: absolute;
         top: 20px;
-        right: 20px;
-        width: 100vw;
+        right: 1px;
+        left: 1px;
+        width: 100%;
         padding: 10px;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         border-radius: 12px;
@@ -356,6 +479,23 @@ button {
     #contact {
         flex-direction: column;
     }
+         /* contact */
+         .con-text p
+         {
+             text-align: center;
+             font: size 1.2rem;
+         }
+          /* contact */
+    #enquiry input,
+    textarea,
+    button {
+        width: 260px;
+    }
+    #socials
+    {
+        flex-direction:column;
+    }
+    
 
 
 }
@@ -363,7 +503,7 @@ button {
 /* Mobile screens */
 @media screen and (max-width: 480px) {
     body {
-        font-size: 0.6rem;
+        font-size: 1.2rem;
     }
 
     #home {
@@ -392,8 +532,20 @@ button {
     #enquiry input,
     textarea,
     button {
-        width: 200px;
+        width: 230px;
     }
-
+    #socials
+    {
+        flex-direction:column;
+    }
+/* about */
+.about-text
+{
+    margin:15px auto;
+}
+.hidee
+{
+    display:block;
+}
 
 }
