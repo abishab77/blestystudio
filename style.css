@@ -21,10 +21,10 @@
     --ps: 5px;
 
     /* color */
-    --primary-color: #1c1c1c;
-    --secondary-color: #E0E0E0;
+    --primary-color: #292927;
+    --secondary-color: rgb(29,21,14);
     --tertiary-color: #3B3333;
-    --quaternary-color: #cfcfcf;
+    --quaternary-color: #D4C8B4;
 
     /* fonts */
     --primary-font: "EB Garamond", serif;
@@ -52,7 +52,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: var(--primary-color);
+    background-color: var(--quaternary-color);
     color: var(--secondary-color);
     margin: 20px;
     border-radius: 12px;
@@ -139,15 +139,16 @@ nav ul li a {
 #cta {
     padding: 10px;
     border-radius: var(--border-n);
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    border: 2px solid var(--secondary-color);
+    background-color: #2a2824;
+    color: var(--quaternary-color);
+   
     margin-top: 10px;
     cursor: pointer;
 }
 
 #home {
-    padding: 10px;
+    padding: 10vh 5vw;
+    
     background-color: var(--quaternary-color);
     color: var(--tertiary-color);
     margin: 20px;
@@ -163,7 +164,7 @@ nav ul li a {
 
 
 #contact {
-    padding: 10px;
+    padding: 10vh 5vw;
     margin: 20px;
     border-radius: var(--border-b);
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
@@ -245,8 +246,8 @@ button {
 }
 
 #enquiry button {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
+    background-color: #2a2824;
+    color: var(--quaternary-color);
     cursor: pointer;
     margin-top: 20px;
 }
@@ -266,7 +267,7 @@ button {
 /* about us */
 #aboutus
 {
-    padding: 10px;
+    padding: 10vh 5vw;
     margin: 20px;
     border-radius: var(--border-b);
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
@@ -327,8 +328,8 @@ button {
 
 #subs-btn
 {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
+    background-color: #2a2824;
+    color: var(--quaternary-color);
     cursor: pointer;
     margin: 0;
     border-radius: 0;
@@ -362,7 +363,33 @@ button {
 
 
 
+/* Assets */
 
+#assets
+{
+    padding: 10vh 5vw;
+    
+    background-color: var(--quaternary-color);
+    color: var(--tertiary-color);
+    margin: 20px;
+    border-radius: var(--border-b);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+
+}
+.equip-div
+{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:90vh;
+}
+.equipeach
+{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:5vw;
+}
 
 /* icons */
 
@@ -405,11 +432,14 @@ button {
 @media (min-width: 768px) {
     body {
         font-size: 1.2rem;
+
     }
 
     #menu {
         display: flex !important;
     }
+    
+  
 
     #menu-icon,
     #close-icon {
@@ -421,6 +451,8 @@ button {
         justify-content: space-between;
         align-items: center;
         gap: 50px;
+        background-color: var(--quaternary-color);
+        color: var(--secondary-color);
     }
      /* contact */
      .con-text p
@@ -436,6 +468,12 @@ button {
 @media screen and (max-width: 768px) {
     body {
         font-size: 1.5rem;
+    }
+    .link-116 a
+    {
+        background-color: var(--secondary-color) ;
+        color:  white;
+
     }
 
     #home {
