@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blesty Studio / Showcase</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/388a11e813.js" crossorigin="anonymous"></script>
+    <!-- Include Slick Slider CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    
+    <!-- Slick Slider Dependencies -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Include Glightbox CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
+<!-- Include Glightbox JS -->
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+
+<style>
+    .glightbox-container {
+  animation: customFadeIn 0.6s ease-in-out;
+}
+
+@keyframes customFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  padding: 10vh 5vw;
+    
+    background-color: var(--quaternary-color);
+    color: var(--tertiary-color);
+    margin: 20px;
+    border-radius: var(--border-b);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+.glightbox img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.glightbox img:hover {
+  transform: scale(1.1);
+  filter: brightness(0.8);
+}
+.glightbox {
+  position: relative;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.glightbox:hover .overlay {
+  opacity: 1;
+}
+
+
+</style>
+
+</head>
+<body>
+     <!-- Header section -->
+     <header>
+        <section id="header-logo" style="margin-left: 10px
+        ;">
+        <!-- <img src="icons/logo small-11.jpg" alt="logo"  style="display: inline;"> -->
+        <!-- <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><defs><style>.cls-1{fill:#d2c7b3;}.cls-2{fill:#282827;}</style></defs><title>ai file</title><rect class="cls-1" width="20" height="20"/><path class="cls-1" d="M17.2,12.08a7.2,7.2,0,0,1-14.4,0c0-.18,0-.35,0-.53h0V.72H10V4.88A7.2,7.2,0,0,1,17.2,12.08Z"/><path class="cls-2" d="M10,4.88V.72H2.8V11.55h0c0,.18,0,.35,0,.53A7.2,7.2,0,1,0,10,4.88Zm0,10a2.79,2.79,0,0,1-2.79-2.79,2.38,2.38,0,0,1,0-.53A2.79,2.79,0,1,1,10,14.87Z"/><ellipse class="cls-1" cx="4.02" cy="1.91" rx="0.7" ry="0.7" transform="translate(-0.26 0.7) rotate(-9.69)"/><polygon class="cls-1" points="6.37 10.73 5.81 11.29 4.93 10.4 5.07 10.27 3.93 9.13 3.92 9.13 3.92 4.02 4.22 4.02 4.22 8.94 5.31 10.03 5.48 9.85 6.37 10.73"/></svg> -->
+            <h1 style="display: inline;">BLESTY STUDIO</h1>
+
+        </section>
+        <nav>
+
+            <ul id="menu" class="hidden">
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" id="close-icon" width="25px" height="25px"
+                    style="cursor: pointer; "><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path fill="#e0e0e0"
+                        d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                </svg>
+                <li class="link-116 "><a href="index.html">Home</a></li>
+                <li class="link-116"><a href="#">Showcase</a></li>
+                <li class="link-116"><a href="assets.html">Assets</a></li>
+                <li class="link-116"><a href="index.html">About Us</a></li>
+                <li class="link-116"><a href="index.html">Contact Us</a></li>
+            </ul>
+            <!-- Menu Icon (Hamburger) -->
+            <svg xmlns="http://www.w3.org/2000/svg" id="menu-icon" viewBox="0 0 448 512" width="25px" height="25px"
+                style="cursor: pointer;">
+
+                <path fill="#e0e0e0"
+                    d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z" />
+            </svg>
+
+        </nav>
+    </header>
+
+    <!-- End Header Section -->
+
+
+
+    <!-- Showcase start -->
+
+    <div class="gallery">
+        <a href="icons/1 (1).jpg" class="glightbox"><img src="icons/1 (1).jpg" alt="Image 1"></a>
+        <a href="icons/2 (1).jpg" class="glightbox"><img src="icons/2 (1).jpg" alt="Image 2"></a>
+        <a href="icons/3 (1).jpg" class="glightbox"><img src="icons/3 (1).jpg" alt="Image 3"></a>
+        
+      </div>
+      
+      
+
+     <!-- Showcase end -->
+
+
+       <!-- footer start -->
+       <footer>
+        <div>
+            <h3>BLESTY STUDIO</h3>
+            <h4>DEVELOPED BY DANIEL AND CO</h4>
+            <h5>2024 All Copyrights Reserved   &copy;</h5>
+            <div id="followus-footer">
+              <div>
+                  <p><a href="https://www.instagram.com/blestystudio/"><i class="fa-brands fa-facebook icons" style="color: #D4C8B4;"></i></a> </p>
+
+              </div>
+              <div>
+                  <p><a href="https://www.instagram.com/blestystudio/"><i class="fa-brands fa-square-instagram icons" style="color: #D4C8B4;"></i> </a></p>
+
+              </div>
+              <div>
+                  <p><a href="https://www.youtube.com/@blestystudio"><i class="fa-brands fa-youtube icons" style="color: #D4C8B4;"></i></a> </p>
+
+              </div>
+              <div>
+                  <p><a href="https://soundcloud.com/blestystudio"><i class="fa-brands fa-soundcloud icons" style="color: #D4C8B4;"></i></a></p>
+
+              </div>
+          </div>
+        </div>
+      </footer>
+      <!-- footer end -->
+       <script>
+//         const lightbox = GLightbox({
+//   touchNavigation: true,  // Enable swipe gestures
+//   loop: true,             // Loop through gallery items
+//   zoomable: true,         // Allow zooming on images
+//   openEffect: 'fade',     // Opening animation ('zoom', 'fade', 'none')
+//   closeEffect: 'fade',    // Closing animation
+//   autoplayVideos: false,  // Disable autoplay for videos
+//   keyboardNavigation: true, // Enable navigation using the keyboard
+// });
+const lightbox = GLightbox({
+  openEffect: 'zoom',   // Options: 'zoom', 'fade', 'none'
+  closeEffect: 'fade',  // Options: 'zoom', 'fade', 'none'
+  slideEffect: 'slide', // Options: 'slide', 'fade', 'none'
+  zoomable: true,       // Enable zoom on images
+});
+       </script>
+    <script src="script.js"></script>
+    <script>
+  AOS.init();
+</script>
+</body>
+</html>
