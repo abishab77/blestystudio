@@ -122,10 +122,7 @@ nav ul li a {
     border-radius: var(--border-b);
 }
 
-#slider img {
-    width: 300px;
-    height: 400px;
-}
+
 
 #hometext {
     text-align: center;
@@ -205,7 +202,7 @@ nav ul li a {
     display: inline;
 }
 
-.email-link,.phone-link {
+.email-link,.phone-link,.add-link {
     color: var(--primary-color);
     text-decoration: none;
 }
@@ -218,8 +215,14 @@ nav ul li a {
 .phone-link:hover {
     text-decoration: underline;
     position: relative;
+    text-decoration-skip-ink: auto;
     top: -2px;
 }
+.add-link span
+{
+    text-decoration: none;
+}
+
 
 #input-container {
     display: flex;
@@ -386,12 +389,57 @@ button {
 .equipeach
 {
     display:flex;
-    justify-content:space-between;
+    justify-content:space-around;
     align-items:center;
-    gap:5vw;
+    gap:20vw;
+    margin:10vh 0;
+}
+
+.equipeach p
+{
+    line-height: 1.5;
 }
 
 /* icons */
+ /* Slider Container */
+ .slider-container {
+    width: 100%; /* Adjust to fit your layout */
+    max-width: 350px; /* Match image width */
+    margin-bottom: 20px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+  }
+
+  /* Slick Slider Images */
+  .slider-container img {
+    width: 100%; /* Ensure the images fit their container */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+  }
+
+
+
+  /* footer */
+  footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #D4C8B4;
+    text-align: center;
+    margin: 2vh 2vw;
+  }
+  #followus-footer
+  {
+
+    display: flex;
+    justify-content: space-evenly;
+    gap:0px;
+    margin:14px 0px;
+  }
+
+  footer h3,h4,h5
+  {
+    margin:10px 0px;
+  }
 
 
 /* media queries */
@@ -533,7 +581,14 @@ button {
     {
         flex-direction:column;
     }
-    
+    .equipeach:nth-child(odd)
+    {
+        flex-direction: column;
+    }
+    .equipeach:nth-child(even)
+    {
+        flex-direction: column-reverse;
+    }
 
 
 }
