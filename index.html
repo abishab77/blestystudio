@@ -7,6 +7,17 @@
     <title>Blesty Studio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/388a11e813.js" crossorigin="anonymous"></script>
+    <!-- Include Slick Slider CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    
+    <!-- Slick Slider Dependencies -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+
 </head>
 
 <body>
@@ -15,7 +26,10 @@
     <header>
         <section id="header-logo" style="margin-left: 10px
         ;">
-            <h1>BLESTY STUDIO</h1>
+        <!-- <img src="icons/logo small-11.jpg" alt="logo"  style="display: inline;"> -->
+        <!-- <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><defs><style>.cls-1{fill:#d2c7b3;}.cls-2{fill:#282827;}</style></defs><title>ai file</title><rect class="cls-1" width="20" height="20"/><path class="cls-1" d="M17.2,12.08a7.2,7.2,0,0,1-14.4,0c0-.18,0-.35,0-.53h0V.72H10V4.88A7.2,7.2,0,0,1,17.2,12.08Z"/><path class="cls-2" d="M10,4.88V.72H2.8V11.55h0c0,.18,0,.35,0,.53A7.2,7.2,0,1,0,10,4.88Zm0,10a2.79,2.79,0,0,1-2.79-2.79,2.38,2.38,0,0,1,0-.53A2.79,2.79,0,1,1,10,14.87Z"/><ellipse class="cls-1" cx="4.02" cy="1.91" rx="0.7" ry="0.7" transform="translate(-0.26 0.7) rotate(-9.69)"/><polygon class="cls-1" points="6.37 10.73 5.81 11.29 4.93 10.4 5.07 10.27 3.93 9.13 3.92 9.13 3.92 4.02 4.22 4.02 4.22 8.94 5.31 10.03 5.48 9.85 6.37 10.73"/></svg> -->
+            <h1 style="display: inline;">BLESTY STUDIO</h1>
+
         </section>
         <nav>
 
@@ -27,10 +41,10 @@
                     <path fill="#e0e0e0"
                         d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
                 </svg>
-                <li class="link-116 "><a href="">Home</a></li>
-                <li class="link-116"><a href="">Showcase</a></li>
-                <li class="link-116"><a href="">Assets</a></li>
-                <li class="link-116"><a href="">About Us</a></li>
+                <li class="link-116 "><a href="#home">Home</a></li>
+                <li class="link-116"><a href="showcase.html">Showcase</a></li>
+                <li class="link-116"><a href="assets.html">Assets</a></li>
+                <li class="link-116"><a href="#aboutus">About Us</a></li>
                 <li class="link-116"><a href="#contact">Contact Us</a></li>
             </ul>
             <!-- Menu Icon (Hamburger) -->
@@ -51,9 +65,9 @@
         <article id="slider">
             <!-- <img src="guitar.jpg" class="responsive-image"> -->
             <picture>
-                <source srcset="guitar.jpg" media="(min-width: 768px)">
-                <source srcset="1.png" media="(max-width: 767px)">
-                <img src="guitar final.jpg" alt="Responsive Image">
+                <source srcset="1.jpg" media="(min-width: 768px)">
+                <source srcset="2.jpg" media="(max-width: 767px)">
+                <img src="3.jpg" alt="Responsive Image">
               </picture>
 
         </article>
@@ -82,11 +96,11 @@
     <!-- About us section -->
 
 
-    <section id="aboutus">
+    <section id="aboutus" >
 
         <h2>About us</h2>
 
-        <div class="about-text">
+        <div class="about-text" >
 
             <p>
                 At Blesty Studio, our mission is simple:<br> To empower musicians and artists to bring their creative
@@ -159,9 +173,10 @@
                                     class="email-link">blestystudio@gmail.com</a></span></p>
                         <p><i class="fa-solid fa-phone icons" style="color: #1c1c1c;"></i><span class="phone-wrapper"><a
                                     href="tel:+919344147330" class="phone-link">+91 9344147330</a></span></p>
-                        <p><i class="fa-solid fa-location-dot icons" style="color: #1c1c1c;"></i><span>152/1, Capernaum,
-                                Grace Gardens,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Keel Krishnapuram, KGF, Oorgaum
-                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pet post, Karnataka - 563121</span></p>
+
+                        <p><i class="fa-solid fa-location-dot icons" style="color: #1c1c1c;"></i><span><a  class="phone-link add-link" href="https://maps.app.goo.gl/9jXZB85ckHFoErhw8">  152/1, Capernaum,  
+                                Grace Gardens,<br><span style="margin-left: 30px;"></span> Keel Krishnapuram, KGF, Oorgaum
+                                <br><span style="margin-left: 30px;"></span>pet post, Karnataka - 563121  </a></span></p >
                     </div>
                 </div>
 
@@ -171,19 +186,19 @@
                     </h6>
                     <div id="followus">
                         <div>
-                            <p><i class="fa-brands fa-facebook icons" style="color: #1c1c1c;"></i> </p>
+                            <p><a href="https://www.instagram.com/blestystudio/"><i class="fa-brands fa-facebook icons" style="color: #1c1c1c;"></i></a> </p>
 
                         </div>
                         <div>
-                            <p><i class="fa-brands fa-square-instagram icons" style="color: #1c1c1c;"></i> </p>
+                            <p><a href="https://www.instagram.com/blestystudio/"><i class="fa-brands fa-square-instagram icons" style="color: #1c1c1c;"></i> </a></p>
 
                         </div>
                         <div>
-                            <p><i class="fa-brands fa-youtube icons" style="color: #1c1c1c;"></i> </p>
+                            <p><a href="https://www.youtube.com/@blestystudio"><i class="fa-brands fa-youtube icons" style="color: #1c1c1c;"></i></a> </p>
 
                         </div>
                         <div>
-                            <p><i class="fa-brands fa-soundcloud icons" style="color: #1c1c1c;"></i></p>
+                            <p><a href="https://soundcloud.com/blestystudio"><i class="fa-brands fa-soundcloud icons" style="color: #1c1c1c;"></i></a></p>
 
                         </div>
                     </div>
@@ -200,9 +215,9 @@
 
         </article>
 
-        <article id="enquiry">
+        <article id="enquiry" >
             <h3>Enquiry now!</h3>
-            <div id="input-container">
+            <div id="input-container" >
                 <input type="text" id="name-enquiry" placeholder="Enter your name"><br>
                 <input type="text" id="subject-enquiry" placeholder="Enter your Subject"><br>
                 <input type="email" id="email-enquiry" placeholder="Enter your email"><br>
@@ -226,84 +241,39 @@
 
 
 
-    <!-- Start Assets page -->
-    <section id="assets">
+   
 
+     <!-- footer start -->
+      <footer>
+        <div>
+            <h3>BLESTY STUDIO</h3>
+            <h4>DEVELOPED BY DANIEL AND CO</h4>
+            <h5>2024 All Copyrights Reserved   &copy;</h5>
+            <div id="followus-footer">
+              <div>
+                  <p><a href="https://www.instagram.com/blestystudio/"><i class="fa-brands fa-facebook icons" style="color: #D4C8B4;"></i></a> </p>
 
-        <div class="equip-div">
+              </div>
+              <div>
+                  <p><a href="https://www.instagram.com/blestystudio/"><i class="fa-brands fa-square-instagram icons" style="color: #D4C8B4;"></i> </a></p>
 
-            <div>
-                <h2>
-                    EQUIPMENT
-                </h2>
+              </div>
+              <div>
+                  <p><a href="https://www.youtube.com/@blestystudio"><i class="fa-brands fa-youtube icons" style="color: #D4C8B4;"></i></a> </p>
 
-            </div>
+              </div>
+              <div>
+                  <p><a href="https://soundcloud.com/blestystudio"><i class="fa-brands fa-soundcloud icons" style="color: #D4C8B4;"></i></a></p>
 
+              </div>
+          </div>
         </div>
-
-
-        <div class="equipments">
-           <article class="equipeach">
-
-<div>
-    <img src="guitar 350.jpg" height="300px" width="400px">
-
-</div>
-<div>
-    <h4>piano</h4>
-    <p>Experience the most realistic virtual piano online. Play free interactive songs, share your recordings and learn notes and scales on multiple instruments.</p>
-
-</div>
-
-           </article>
-
-
-
-           <article class="equipeach">
-
-         
-            <div>
-                <h4>piano</h4>
-                <p>Experience the most realistic virtual piano online. Play free interactive songs, share your recordings and learn notes and scales on multiple instruments.</p>
-            
-            </div>
-            <div>
-                <img src="guitar 350.jpg" height="300px" width="400px">
-            
-            </div>
-                       </article>
-                       <article class="equipeach">
-
-                        <div>
-                            <img src="guitar 350.jpg" height="300px" width="400px">
-                        
-                        </div>
-                        <div>
-                            <h4>piano</h4>
-                            <p>Experience the most realistic virtual piano online. Play free interactive songs, share your recordings and learn notes and scales on multiple instruments.</p>
-                        
-                        </div>
-                        
-                                   </article>
-
-           <article class="equipeach">
-        </article>
-        <article class="equipeach">
-        </article>
-        <article class="equipeach">
-        </article>
-        <article class="equipeach">
-        </article>
-        </div>
-
-       
-
-
-    </section>
-
-
-     <!-- End Assets page -->
+      </footer>
+      <!-- footer end -->
     <script src="script.js"></script>
+    <script>
+  AOS.init();
+</script>
 </body>
 
 </html>
