@@ -22,7 +22,7 @@
 
     /* color */
     --primary-color: #292927;
-    --secondary-color: rgb(29,21,14);
+    --secondary-color: rgb(29, 21, 14);
     --tertiary-color: #3B3333;
     --quaternary-color: #D4C8B4;
 
@@ -45,6 +45,11 @@ body {
     font-family: var(--primary-font);
 }
 
+#menu-icon,
+#close-icon {
+    display: none;
+}
+
 /* Basic Styling */
 header {
     font-family: var(--secondary-font);
@@ -57,6 +62,16 @@ header {
     margin: 20px;
     border-radius: 12px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    z-index: 1000;
+
+
+
+
+    z-index: 1000;
+}
+
+img {
+    z-index: 99;
 }
 
 #header-logo h1 {
@@ -138,14 +153,14 @@ nav ul li a {
     border-radius: var(--border-n);
     background-color: #2a2824;
     color: var(--quaternary-color);
-   
+
     margin-top: 10px;
     cursor: pointer;
 }
 
 #home {
     padding: 10vh 5vw;
-    
+
     background-color: var(--quaternary-color);
     color: var(--tertiary-color);
     margin: 20px;
@@ -170,7 +185,7 @@ nav ul li a {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    
+
 }
 
 
@@ -191,6 +206,7 @@ nav ul li a {
     flex-direction: row;
     gap: 20px;
 }
+
 .icons {
     margin-right: 10px;
     font-size: 1.4rem;
@@ -202,7 +218,9 @@ nav ul li a {
     display: inline;
 }
 
-.email-link,.phone-link,.add-link {
+.email-link,
+.phone-link,
+.add-link {
     color: var(--primary-color);
     text-decoration: none;
 }
@@ -212,14 +230,15 @@ nav ul li a {
     position: relative;
     top: -2px;
 }
+
 .phone-link:hover {
     text-decoration: underline;
     position: relative;
     text-decoration-skip-ink: auto;
     top: -2px;
 }
-.add-link span
-{
+
+.add-link span {
     text-decoration: none;
 }
 
@@ -254,22 +273,21 @@ button {
     cursor: pointer;
     margin-top: 20px;
 }
-#followus
-{
+
+#followus {
     display: flex;
     justify-content: space-around;
-    gap:10px;
+    gap: 10px;
 }
-#social-header
-{
+
+#social-header {
     font-size: 1.6rem;
     text-align: center;
 }
 
 
 /* about us */
-#aboutus
-{
+#aboutus {
     padding: 10vh 5vw;
     margin: 20px;
     border-radius: var(--border-b);
@@ -279,35 +297,35 @@ button {
 
 }
 
-#aboutus h2
-{
+#aboutus h2 {
     text-align: center;
 
 }
-.about-text
-{
+
+.about-text {
     text-align: left;
     margin: 10px auto;
     display: flex;
     justify-content: center;
     font-family: var(--primary-font);
 }
-.hidee
-{
-    display:none;
+
+.hidee {
+    display: none;
 }
-#subscription
-{
-   
+
+#subscription {
+
     margin: 5px;
     text-align: center;
     display: flex;
     justify-items: center;
     align-items: center;
 }
-#subscription input,button
-{
-    
+
+#subscription input,
+button {
+
     width: 350px;
     border-radius: 0;
     border: none;
@@ -318,19 +336,17 @@ button {
 
 }
 
-#subscription input:hover
-{
+#subscription input:hover {
     border: 1px solid;
 }
-#subscription button:hover
-{
-    color:#1c1c1c ;
+
+#subscription button:hover {
+    color: #1c1c1c;
     background-color: #ff6d00;
 }
 
 
-#subs-btn
-{
+#subs-btn {
     background-color: #2a2824;
     color: var(--quaternary-color);
     cursor: pointer;
@@ -340,21 +356,21 @@ button {
     letter-spacing: 3px;
     font-family: var(--primary-font);
     font-size: 1rem;
-    
 
-   
+
+
 }
-#subs-input
-{
+
+#subs-input {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-   
+
     margin: 10px auto;
 }
-#subscription input::placeholder
-{
+
+#subscription input::placeholder {
     font-family: var(--primary-font);
 }
 
@@ -368,10 +384,9 @@ button {
 
 /* Assets */
 
-#assets
-{
+#assets {
     padding: 10vh 5vw;
-    
+
     background-color: var(--quaternary-color);
     color: var(--tertiary-color);
     margin: 20px;
@@ -379,68 +394,96 @@ button {
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 
 }
-.equip-div
-{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:90vh;
-}
-.equipeach
-{
-    display:flex;
-    justify-content:space-around;
-    align-items:center;
-    gap:20vw;
-    margin:10vh 0;
+
+.equip-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
 }
 
-.equipeach p
-{
+.equipeach {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20vw;
+    margin: 10vh 0;
+}
+
+.equipeach p {
     line-height: 1.5;
 }
 
 /* icons */
- /* Slider Container */
- .slider-container {
-    width: 100%; /* Adjust to fit your layout */
-    max-width: 350px; /* Match image width */
+/* Slider Container */
+.slider-container {
+    width: 100%;
+    /* Adjust to fit your layout */
+    max-width: 350px;
+    /* Match image width */
     margin-bottom: 20px;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
-  }
+}
 
-  /* Slick Slider Images */
-  .slider-container img {
-    width: 100%; /* Ensure the images fit their container */
-    height: auto; /* Maintain aspect ratio */
+/* Slick Slider Images */
+.slider-container img {
+    width: 100%;
+    /* Ensure the images fit their container */
+    height: auto;
+    /* Maintain aspect ratio */
     display: block;
-  }
+}
+
+/* showcase h */
+#showcase-home {
+    gap: 10px;
+    padding: 10vh 5vw;
+
+    background-color: var(--quaternary-color);
+    color: var(--tertiary-color);
+    margin: 20px;
+    border-radius: var(--border-b);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
 
 
 
-  /* footer */
-  footer{
+/* footer */
+footer {
     display: flex;
     justify-content: center;
     align-items: center;
     color: #D4C8B4;
     text-align: center;
     margin: 2vh 2vw;
-  }
-  #followus-footer
-  {
+    position: relative;
+}
+
+#followus-footer {
 
     display: flex;
     justify-content: space-evenly;
-    gap:0px;
-    margin:14px 0px;
-  }
+    gap: 0px;
+    margin: 14px 0px;
+}
 
-  footer h3,h4,h5
-  {
-    margin:10px 0px;
-  }
+footer h3,
+h4,
+h5 {
+    margin: 10px 0px;
+}
 
+.upper-arrow {
+    position: absolute;
+    right: 30px;
+    bottom: 50px;
+
+    padding: 2px;
+
+
+
+
+}
 
 /* media queries */
 /* Larger screens  above 1200px*/
@@ -466,8 +509,7 @@ button {
     }
 
     /* contact */
-    .con-text p
-    {
+    .con-text p {
         text-align: center;
         font: size 1.4rem;
     }
@@ -486,8 +528,8 @@ button {
     #menu {
         display: flex !important;
     }
-    
-  
+
+
 
     #menu-icon,
     #close-icon {
@@ -502,12 +544,12 @@ button {
         background-color: var(--quaternary-color);
         color: var(--secondary-color);
     }
-     /* contact */
-     .con-text p
-     {
-         text-align: center;
-         font: size 1.2rem;
-     }
+
+    /* contact */
+    .con-text p {
+        text-align: center;
+        font: size 1.2rem;
+    }
 
 
 }
@@ -517,10 +559,10 @@ button {
     body {
         font-size: 1.5rem;
     }
-    .link-116 a
-    {
-        background-color: var(--secondary-color) ;
-        color:  white;
+
+    .link-116 a {
+        background-color: var(--secondary-color);
+        color: white;
 
     }
 
@@ -530,6 +572,7 @@ button {
         align-items: center;
         gap: 50px;
         flex-direction: column;
+        z-index: 90;
     }
 
     nav ul {
@@ -546,6 +589,7 @@ button {
         border-radius: 12px;
         height: 96%;
         text-align: center;
+        z-index: 1000;
     }
 
     #menu-icon {
@@ -565,28 +609,29 @@ button {
     #contact {
         flex-direction: column;
     }
-         /* contact */
-         .con-text p
-         {
-             text-align: center;
-             font: size 1.2rem;
-         }
-          /* contact */
+
+    /* contact */
+    .con-text p {
+        text-align: center;
+        font: size 1.2rem;
+    }
+
+    /* contact */
     #enquiry input,
     textarea,
     button {
         width: 260px;
     }
-    #socials
-    {
-        flex-direction:column;
-    }
-    .equipeach:nth-child(odd)
-    {
+
+    #socials {
         flex-direction: column;
     }
-    .equipeach:nth-child(even)
-    {
+
+    .equipeach:nth-child(odd) {
+        flex-direction: column;
+    }
+
+    .equipeach:nth-child(even) {
         flex-direction: column-reverse;
     }
 
@@ -627,18 +672,18 @@ button {
     button {
         width: 230px;
     }
-    #socials
-    {
-        flex-direction:column;
+
+    #socials {
+        flex-direction: column;
     }
-/* about */
-.about-text
-{
-    margin:15px auto;
-}
-.hidee
-{
-    display:block;
-}
+
+    /* about */
+    .about-text {
+        margin: 15px auto;
+    }
+
+    .hidee {
+        display: block;
+    }
 
 }
