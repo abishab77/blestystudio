@@ -23,6 +23,21 @@
 
 
 <style>
+
+
+
+
+#showcase
+{
+  gap: 10px;
+  padding: 10vh 5vw;
+    
+    background-color: var(--quaternary-color);
+    color: var(--tertiary-color);
+    margin: 20px;
+    border-radius: var(--border-b);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
     .glightbox-container {
   animation: customFadeIn 0.6s ease-in-out;
 }
@@ -41,15 +56,12 @@
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 10px;
-  padding: 10vh 5vw;
-    
-    background-color: var(--quaternary-color);
-    color: var(--tertiary-color);
-    margin: 20px;
-    border-radius: var(--border-b);
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  
 
+}
+.gallery a
+{
+  margin: 7px;
 }
 
 .gallery img {
@@ -101,8 +113,7 @@
      <header>
         <section id="header-logo" style="margin-left: 10px
         ;">
-        <!-- <img src="icons/logo small-11.jpg" alt="logo"  style="display: inline;"> -->
-        <!-- <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><defs><style>.cls-1{fill:#d2c7b3;}.cls-2{fill:#282827;}</style></defs><title>ai file</title><rect class="cls-1" width="20" height="20"/><path class="cls-1" d="M17.2,12.08a7.2,7.2,0,0,1-14.4,0c0-.18,0-.35,0-.53h0V.72H10V4.88A7.2,7.2,0,0,1,17.2,12.08Z"/><path class="cls-2" d="M10,4.88V.72H2.8V11.55h0c0,.18,0,.35,0,.53A7.2,7.2,0,1,0,10,4.88Zm0,10a2.79,2.79,0,0,1-2.79-2.79,2.38,2.38,0,0,1,0-.53A2.79,2.79,0,1,1,10,14.87Z"/><ellipse class="cls-1" cx="4.02" cy="1.91" rx="0.7" ry="0.7" transform="translate(-0.26 0.7) rotate(-9.69)"/><polygon class="cls-1" points="6.37 10.73 5.81 11.29 4.93 10.4 5.07 10.27 3.93 9.13 3.92 9.13 3.92 4.02 4.22 4.02 4.22 8.94 5.31 10.03 5.48 9.85 6.37 10.73"/></svg> -->
+        
             <h1 style="display: inline;">BLESTY STUDIO</h1>
 
         </section>
@@ -123,13 +134,7 @@
                 <li class="link-116"><a href="index.html">Contact Us</a></li>
             </ul>
             <!-- Menu Icon (Hamburger) -->
-            <svg xmlns="http://www.w3.org/2000/svg" id="menu-icon" viewBox="0 0 448 512" width="25px" height="25px"
-                style="cursor: pointer;">
-
-                <path fill="#e0e0e0"
-                    d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z" />
-            </svg>
-
+            <i class="fa-solid fa-bars" style="color: #1d150e; cursor: pointer;"  id="menu-icon"></i>
         </nav>
     </header>
 
@@ -139,45 +144,71 @@
 
     <!-- Showcase start -->
 
+    <section id="showcase">
+
     <div class="gallery">
+        <a href="Testingimg/350200.jpg" class="glightbox"><img src="Testingimg/350200.jpg" alt="Image 1"></a>
+        <a href="Testingimg/400230.jpg" class="glightbox"><img src="Testingimg/400230.jpg" alt="Image 2"></a>
+        <a href="Testingimg/500290.jpg" class="glightbox"><img src="Testingimg/500290.jpg" alt="Image 3"></a>
+        <!-- <a href="icons/1 (1).jpg" class="glightbox"><img src="icons/1 (1).jpg" alt="Image 1"></a> -->
+
+        
+      </div>
+<!--       
+      <div class="gallery">
         <a href="icons/1 (1).jpg" class="glightbox"><img src="icons/1 (1).jpg" alt="Image 1"></a>
         <a href="icons/2 (1).jpg" class="glightbox"><img src="icons/2 (1).jpg" alt="Image 2"></a>
         <a href="icons/3 (1).jpg" class="glightbox"><img src="icons/3 (1).jpg" alt="Image 3"></a>
         
       </div>
-      
-      
-
+      <div class="gallery">
+        <a href="icons/1 (1).jpg" class="glightbox"><img src="icons/1 (1).jpg" alt="Image 1"></a>
+        <a href="icons/2 (1).jpg" class="glightbox"><img src="icons/2 (1).jpg" alt="Image 2"></a>
+        
+        
+      </div> -->
+    </section>
+    <a href="Testingimg/350200.jpg" class="glightbox"><img src="Testingimg/350200.jpg" alt="Image 1"></a>
+    <a href="Testingimg/400230.jpg" class="glightbox"><img src="Testingimg/400230.jpg" alt="Image 2"></a>
+    <a href="Testingimg/500290.jpg" class="glightbox"><img src="Testingimg/500290.jpg" alt="Image 3"></a>
      <!-- Showcase end -->
 
 
-       <!-- footer start -->
-       <footer>
-        <div>
-            <h3>BLESTY STUDIO</h3>
-            <h4>DEVELOPED BY DANIEL AND CO</h4>
-            <h5>2024 All Copyrights Reserved   &copy;</h5>
-            <div id="followus-footer">
+          <!-- footer start -->
+    <footer>
+      <div>
+          <h3>BLESTY STUDIO</h3>
+          <h4>DEVELOPED BY DANIEL AND CO</h4>
+         
+          <div id="followus-footer">
               <div>
-                  <p><a href="https://www.instagram.com/blestystudio/"><i class="fa-brands fa-facebook icons" style="color: #D4C8B4;"></i></a> </p>
+                  <p><a target="_blank" href="https://www.instagram.com/blestystudio/"><i class="fa-brands fa-facebook icons"
+                              style="color: #D4C8B4;"></i></a> </p>
 
               </div>
               <div>
-                  <p><a href="https://www.instagram.com/blestystudio/"><i class="fa-brands fa-square-instagram icons" style="color: #D4C8B4;"></i> </a></p>
+                  <p><a target="_blank" href="https://www.instagram.com/blestystudio/"><i class="fa-brands fa-square-instagram icons"
+                              style="color: #D4C8B4;"></i> </a></p>
 
               </div>
               <div>
-                  <p><a href="https://www.youtube.com/@blestystudio"><i class="fa-brands fa-youtube icons" style="color: #D4C8B4;"></i></a> </p>
+                  <p><a target="_blank" href="https://www.youtube.com/@blestystudio"><i class="fa-brands fa-youtube icons"
+                              style="color: #D4C8B4;"></i></a> </p>
 
               </div>
               <div>
-                  <p><a href="https://soundcloud.com/blestystudio"><i class="fa-brands fa-soundcloud icons" style="color: #D4C8B4;"></i></a></p>
+                  <p><a target="_blank" href="https://soundcloud.com/blestystudio"><i class="fa-brands fa-soundcloud icons"
+                              style="color: #D4C8B4;"></i></a></p>
 
               </div>
           </div>
-        </div>
-      </footer>
-      <!-- footer end -->
+          <div style="border-top: 2px solid #D4C8B4; "></div>
+          <h5 >Copyright &copy; 2024 BlestyStudio. All Rights Reserved</h5>
+      </div>
+  <a href="#" class="upper-arrow"><i class="fa-solid fa-arrow-turn-up" style="color: #d4c8b4;"></i></a>
+
+  </footer>
+  <!-- footer end -->
        <script>
 //         const lightbox = GLightbox({
 //   touchNavigation: true,  // Enable swipe gestures
