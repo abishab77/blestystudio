@@ -79,7 +79,9 @@
                 Elevate your music in a space where passion<br> meets precision. Experience unparalleled quality.
 
             </h2>
-            <button id="cta"><a href="#contact" style="color: #D4C8B4;">Contact Now</a></button>
+            <!-- <button id="cta"><a href="#contact" style="color: #D4C8B4;"></a></button> -->
+            <a href="#contact" style="text-decoration: none;"><button class="button1">Contact Now</button></a>
+
 
         </article>
     </section>
@@ -132,13 +134,13 @@
 
 
         </div>
-
+<!-- 
         <div data-aos="fade-up" style="margin:10px auto; text-align:center; font-weight:500; ">
             Sign up today and be part of something special.
-        </div>
+        </div> -->
 
-
-        <h3 data-aos="fade-up" style="text-align: center;">Newsletter Subscription</h3>
+<!-- 
+        <h3 data-aos="fade-up" style="text-align: center;">Newsletter Subscription</h3> -->
         <!-- <div id="subscription" data-aos="fade-up">
 
             <div id="subs-input">
@@ -250,10 +252,46 @@
                 <div id="subscription" data-aos="fade-up">
 
                     <div id="subs-input">
-                        <form id="subscriptionForm" method="POST" action="subscribe.php">
+                        <!-- <form id="subscriptionForm" method="POST" action="subscribe.php">
                             <input type="text" name="name" id="namesubs" placeholder="NAME" required>
                             <input type="email" name="email" id="emailsubs" placeholder="EMAIL" required>
                             <button type="submit" id="subs-btn">Subscribe Now...</button>
+                        </form> -->
+
+                        <form id="subscriptionForm" method="POST" action="subscribe.php" novalidate>
+                            <!-- Name Field -->
+                            <div>
+                                <input type="text" name="name" id="namesubs" placeholder="NAME" required>
+                                <div id="nameError" class="error-message"></div>
+                            </div>
+                            
+                            <!-- Email Field -->
+                            <div>
+                                <input type="email" name="email" id="emailsubs" placeholder="EMAIL" required>
+                                <div id="emailError" class="error-message"></div>
+                            </div>
+                            
+                            <!-- <button type="submit" id="subs-btn">Subscribe Now...</button> -->
+                            <button type="submit" class="btn-subscribe">
+                                <div style="margin: 0 auto;">
+                                <p style="display: inline;">Subscribe</p>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="h-6 w-6"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                  stroke="currentColor"
+                                  stroke-width="4"
+                                >
+                                  <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                                  ></path>
+                                </svg>
+                            </div>
+                              </button>
+                              
                         </form>
                     </div>
         
@@ -269,52 +307,88 @@
     <section id="assets">
         <div class="equip-div-home">
 
-            <div data-aos="fade-up" data-aos-duration="700">
+            <!-- <div data-aos="fade-up" data-aos-duration="700">
                 <div style="display: flex; justify-content: space-around; margin: 20px;">
                     <img src="icons/Untitled-icons-08.jpg" alt="speaker" width="200px" height="200px"
                         style="opacity: 70%; transform: rotate(-20deg);">
                     <img src="icons/Untitled-icons-09.jpg" alt="mic" width="200px" height="200px"
                         style="opacity: 70%; transform: rotate(30deg);">
-                </div>
+                </div> -->
 
-                <h1 data-aos="fade-up" style="text-align: center; margin-bottom: 10px;">
+                <h1 data-aos="fade-up" class="equip-home" style="text-align: center; margin-bottom: 10px;">
                     EQUIPMENTS
                 </h1>
-                <div data-aos="fade-up" style="display: flex; justify-content: center; align-items: center;">
+                <!-- <div data-aos="fade-up" style="display: flex; justify-content: center; align-items: center;">
 
                     <div>
-                        <a href="#"><i class="fa-solid fa-arrow-right" style="color: #1d150e;"></i></a>
+                        <a href="assets.html"><i class="fa-solid fa-arrow-right" style="color: #1d150e;"></i></a>
 
                     </div>
-                </div>
+                </div> -->
+                
 
 
-                <p data-aos="fade-up" data-aos-duration="700" style="text-align: center;">At Blesty Studio, I believe
+
+                <p class="equip-para" data-aos="fade-up" data-aos-duration="700" style="text-align: center;">At Blesty Studio, I believe
                     that great music starts with great equipment.<br>
                     Click here for a detailed look at some of the gear<br> we use to bring your music to life.</p>
-
+<!-- 
                 <div data-aos="fade-up" style="display: flex; justify-content: space-between; margin: 30px;">
                     <img src="icons/Untitled-icons-04.jpg" alt="speaker" width="200px" height="200px"
                         style="opacity: 70%; transform: rotate(28deg);">
                     <img src="icons/Untitled-icons-06.jpg" alt="mic" width="200px" height="200px"
                         style="opacity: 70%; transform: rotate(-37deg);">
-                </div>
+                </div> -->
 
-
-            </div>
+                <div data-aos="fade-up" style="display: flex; justify-content: center; align-items: center; margin-top: 10px;">
+                    <a style="text-decoration: none; display: inline;" href="assets.html">
+                    <button  class="button" style="--clr: #D4C8B4">
+                       
+                      <span class="button__icon-wrapper">
+                        <svg
+                          viewBox="0 0 14 15"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="button__icon-svg"
+                          width="10"
+                        >
+                          <path
+                            d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                            fill="currentColor"
+                          ></path>
+                        </svg>
+                    
+                        <svg
+                          viewBox="0 0 14 15"
+                          fill="none"
+                          width="10"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="button__icon-svg button__icon-svg--copy"
+                        >
+                          <path
+                            d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                            fill="currentColor"
+                          ></path>
+                        </svg>
+                      </span>
+                      Explore All
+                  
+                    </button>
+                </a>
+                    </div>
+            
 
         </div>
     </section>
     <!-- Assets End -->
     <!-- Showcase start -->
     <section id="showcase-home">
-        <h2 style="text-align: center; " data-aos="fade-up">SHOWCASES</h2>
+        <h2 style="text-align: center; " data-aos="fade-up">SHOWCASE</h2>
         <div style="display: flex; justify-content: space-evenly; align-items: center; margin: 10px;"
             data-aos="fade-up">
 
             <div><img src="icons/1 (1).jpg" alt="img1"></div>
-            <div><img src="icons/2 (1).jpg" alt="img1"></div>
-            <div><img src="icons/3 (1).jpg" alt="img1"></div>
+           
 
         </div>
 
