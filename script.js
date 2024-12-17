@@ -70,50 +70,43 @@ $(document).ready(function () {
 
 
 
-  //basic validation
-  function validateForm() {
-    // Get form field values
-    const name = document.getElementById('name-enquiry').value.trim();
-    const subject = document.getElementById('subject-enquiry').value.trim();
-    const email = document.getElementById('email-enquiry').value.trim();
-    const message = document.getElementById('message-enquiry').value;
+  // Form validation script
+  const form = document.getElementById('subscriptionForm');
+  const nameInput = document.getElementById('namesubs');
+  const emailInput = document.getElementById('emailsubs');
+  const nameError = document.getElementById('nameError');
+  const emailError = document.getElementById('emailError');
 
-    // Validation checks
-    if (name === '') {
-        document.querySelector('#name-label').innerHTML="Inavlid name";
-        alert('Please enter your name.');
-        document.querySelector('#label-name').innerHTML="Inavlid name";
-        return false;
-    }
+  form.addEventListener('submit', function (e) {
+      let valid = true;
 
-    if (subject === '') {
-        alert('Please enter your subject.');
-        return false;
-    }
+      // Clear previous error messages
+      nameError.textContent = '';
+      emailError.textContent = '';
 
-    if (email === '') {
-        alert('Please enter your email.');
-        return false;
-    }
+      // Validate name field
+      if (nameInput.value.trim() === '') {
+          nameError.textContent = '*Name is required';
+          valid = false;
+      }
 
-    if (!validateEmail(email)) {
-        alert('Please enter a valid email address.');
-        return false;
-    }
+      // Validate email field
+      if (emailInput.value.trim() === '') {
+          emailError.textContent = '*Email is required';
+          valid = false;
+      } else if (!isValidEmail(emailInput.value.trim())) {
+          emailError.textContent = '*Please enter a valid email address';
+          valid = false;
+      }
 
-    if (message === '') {
-        alert('Please enter your message.');
-        return false;
-    }
+      // Prevent form submission if validation fails
+      if (!valid) {
+          e.preventDefault();
+      }
+  });
 
-    // If all checks pass
-    alert('Form is valid! You can now submit it.');
-    // Perform further actions (e.g., submitting the form via an API)
-    return true;
-}
-
-// Email validation function
-function validateEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-}
+  // Email validation function
+  function isValidEmail(email) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+  }
