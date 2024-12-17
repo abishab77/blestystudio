@@ -1,160 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blesty Studio / Showcase</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/388a11e813.js" crossorigin="anonymous"></script>
-    <!-- Include Slick Slider CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
-    
-    <!-- Slick Slider Dependencies -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Include Glightbox CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blesty Studio / Showcase</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/388a11e813.js" crossorigin="anonymous"></script>
+  <!-- Include Slick Slider CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
 
-<!-- Include Glightbox JS -->
-<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <!-- Slick Slider Dependencies -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Include Glightbox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
 
-
-<style>
+  <!-- Include Glightbox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
 
+  <style>
+    #showcase {
+      gap: 10px;
+      padding: 10vh 5vw;
 
+      background-color: var(--quaternary-color);
+      color: var(--tertiary-color);
+      margin: 20px;
+      border-radius: var(--border-b);
+      box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    }
 
-#showcase
-{
-  gap: 10px;
-  padding: 10vh 5vw;
-    
-    background-color: var(--quaternary-color);
-    color: var(--tertiary-color);
-    margin: 20px;
-    border-radius: var(--border-b);
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-}
     .glightbox-container {
-  animation: customFadeIn 0.6s ease-in-out;
-}
+      animation: customFadeIn 0.6s ease-in-out;
+    }
 
-@keyframes customFadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
+    @keyframes customFadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
 
-}
-.gallery a
-{
-  margin: 7px;
-}
-
-.gallery img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-.glightbox img {
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.glightbox img:hover {
-  transform: scale(1.1);
-  filter: brightness(0.8);
-}
-.glightbox {
-  position: relative;
-  display: block;
-}
-
-.overlay {
-  position: absolute;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  width: 100%;
-  padding: 10px;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.glightbox:hover .overlay {
-  opacity: 1;
-}
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 
 
-</style>
+    }
+
+    .gallery a {
+      margin: 7px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .glightbox img {
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .glightbox img:hover {
+      transform: scale(1.1);
+      filter: brightness(0.8);
+    }
+
+    .glightbox {
+      position: relative;
+      display: block;
+    }
+
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      width: 100%;
+      padding: 10px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .glightbox:hover .overlay {
+      opacity: 1;
+    }
+  </style>
 
 </head>
+
 <body>
-     <!-- Header section -->
-     <header>
-        <section id="header-logo" style="margin-left: 10px
+  <!-- Header section -->
+  <header>
+    <section id="header-logo" style="margin-left: 10px
         ;">
-        
-            <h1 style="display: inline;">BLESTY STUDIO</h1>
 
-        </section>
-        <nav>
+      <h1 style="display: inline;">BLESTY STUDIO</h1>
 
-            <ul id="menu" class="hidden">
+    </section>
+    <nav>
 
-
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" id="close-icon" width="25px" height="25px"
-                    style="cursor: pointer; "><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                    <path fill="#e0e0e0"
-                        d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
-                </svg>
-                <li class="link-116 "><a href="index.html">Home</a></li>
-                <li class="link-116"><a href="#">Showcase</a></li>
-                <li class="link-116"><a href="assets.html">Assets</a></li>
-                <li class="link-116"><a href="index.html">About Us</a></li>
-                <li class="link-116"><a href="index.html">Contact Us</a></li>
-            </ul>
-            <!-- Menu Icon (Hamburger) -->
-            <i class="fa-solid fa-bars" style="color: #1d150e; cursor: pointer;"  id="menu-icon"></i>
-        </nav>
-    </header>
-
-    <!-- End Header Section -->
+      <ul id="menu" class="hidden">
 
 
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" id="close-icon" width="25px" height="25px"
+          style="cursor: pointer; "><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+          <path fill="#e0e0e0"
+            d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+        </svg>
+        <li class="link-116 "><a href="index.html">Home</a></li>
+        <li class="link-116"><a href="#">Showcase</a></li>
+        <li class="link-116"><a href="assets.html">Assets</a></li>
+        <li class="link-116"><a href="index.html#aboutus">About Us</a></li>
+        <li class="link-116"><a href="index.html#contact">Contact Us</a></li>
+      </ul>
+      <!-- Menu Icon (Hamburger) -->
+      <i class="fa-solid fa-bars" style="color: #1d150e; cursor: pointer;" id="menu-icon"></i>
+    </nav>
+  </header>
 
-    <!-- Showcase start -->
+  <!-- End Header Section -->
 
-    <section id="showcase">
+
+
+  <!-- Showcase start -->
+
+  <section id="showcase">
 
     <div class="gallery">
-        <a href="Testingimg/350200.jpg" class="glightbox"><img src="Testingimg/350200.jpg" alt="Image 1"></a>
-        <a href="Testingimg/400230.jpg" class="glightbox"><img src="Testingimg/400230.jpg" alt="Image 2"></a>
-        <a href="Testingimg/500290.jpg" class="glightbox"><img src="Testingimg/500290.jpg" alt="Image 3"></a>
-        <!-- <a href="icons/1 (1).jpg" class="glightbox"><img src="icons/1 (1).jpg" alt="Image 1"></a> -->
+      <a href="Testingimg/350200.jpg" class="glightbox"><img src="Testingimg/350200.jpg" alt="Image 1"></a>
+      <a href="Testingimg/400230.jpg" class="glightbox"><img src="Testingimg/400230.jpg" alt="Image 2"></a>
+      <a href="Testingimg/500290.jpg" class="glightbox"><img src="Testingimg/500290.jpg" alt="Image 3"></a>
+      <!-- <a href="icons/1 (1).jpg" class="glightbox"><img src="icons/1 (1).jpg" alt="Image 1"></a> -->
 
-        
-      </div>
-<!--       
+
+    </div>
+    <!--       
       <div class="gallery">
         <a href="icons/1 (1).jpg" class="glightbox"><img src="icons/1 (1).jpg" alt="Image 1"></a>
         <a href="icons/2 (1).jpg" class="glightbox"><img src="icons/2 (1).jpg" alt="Image 2"></a>
@@ -167,68 +166,69 @@
         
         
       </div> -->
-    </section>
-    <a href="Testingimg/350200.jpg" class="glightbox"><img src="Testingimg/350200.jpg" alt="Image 1"></a>
-    <a href="Testingimg/400230.jpg" class="glightbox"><img src="Testingimg/400230.jpg" alt="Image 2"></a>
-    <a href="Testingimg/500290.jpg" class="glightbox"><img src="Testingimg/500290.jpg" alt="Image 3"></a>
-     <!-- Showcase end -->
+  </section>
+  <a href="Testingimg/350200.jpg" class="glightbox"><img src="Testingimg/350200.jpg" alt="Image 1"></a>
+  <a href="Testingimg/400230.jpg" class="glightbox"><img src="Testingimg/400230.jpg" alt="Image 2"></a>
+  <a href="Testingimg/500290.jpg" class="glightbox"><img src="Testingimg/500290.jpg" alt="Image 3"></a>
+  <!-- Showcase end -->
 
 
-          <!-- footer start -->
-    <footer>
-      <div>
-          <h3>BLESTY STUDIO</h3>
-          <h4>DEVELOPED BY DANIEL AND CO</h4>
-         
-          <div id="followus-footer">
-              <div>
-                  <p><a target="_blank" href="https://www.instagram.com/blestystudio/"><i class="fa-brands fa-facebook icons"
-                              style="color: #D4C8B4;"></i></a> </p>
+  <!-- footer start -->
+  <footer>
+    <div>
+      <h3>BLESTY STUDIO</h3>
+      <h4>DEVELOPED BY DANIEL AND CO</h4>
 
-              </div>
-              <div>
-                  <p><a target="_blank" href="https://www.instagram.com/blestystudio/"><i class="fa-brands fa-square-instagram icons"
-                              style="color: #D4C8B4;"></i> </a></p>
+      <div id="followus-footer">
+        <div>
+          <p><a target="_blank" href="https://www.instagram.com/blestystudio/"><i class="fa-brands fa-facebook icons"
+                style="color: #D4C8B4;"></i></a> </p>
 
-              </div>
-              <div>
-                  <p><a target="_blank" href="https://www.youtube.com/@blestystudio"><i class="fa-brands fa-youtube icons"
-                              style="color: #D4C8B4;"></i></a> </p>
+        </div>
+        <div>
+          <p><a target="_blank" href="https://www.instagram.com/blestystudio/"><i
+                class="fa-brands fa-square-instagram icons" style="color: #D4C8B4;"></i> </a></p>
 
-              </div>
-              <div>
-                  <p><a target="_blank" href="https://soundcloud.com/blestystudio"><i class="fa-brands fa-soundcloud icons"
-                              style="color: #D4C8B4;"></i></a></p>
+        </div>
+        <div>
+          <p><a target="_blank" href="https://www.youtube.com/@blestystudio"><i class="fa-brands fa-youtube icons"
+                style="color: #D4C8B4;"></i></a> </p>
 
-              </div>
-          </div>
-          <div style="border-top: 2px solid #D4C8B4; "></div>
-          <h5 >Copyright &copy; 2024 BlestyStudio. All Rights Reserved</h5>
+        </div>
+        <div>
+          <p><a target="_blank" href="https://soundcloud.com/blestystudio"><i class="fa-brands fa-soundcloud icons"
+                style="color: #D4C8B4;"></i></a></p>
+
+        </div>
       </div>
-  <a href="#" class="upper-arrow"><i class="fa-solid fa-arrow-turn-up" style="color: #d4c8b4;"></i></a>
+      <div style="border-top: 2px solid #D4C8B4; "></div>
+      <h5>Copyright &copy; 2024 BlestyStudio. All Rights Reserved</h5>
+    </div>
+    <a href="#" class="upper-arrow"><i class="fa-solid fa-arrow-turn-up" style="color: #d4c8b4;"></i></a>
 
   </footer>
   <!-- footer end -->
-       <script>
-//         const lightbox = GLightbox({
-//   touchNavigation: true,  // Enable swipe gestures
-//   loop: true,             // Loop through gallery items
-//   zoomable: true,         // Allow zooming on images
-//   openEffect: 'fade',     // Opening animation ('zoom', 'fade', 'none')
-//   closeEffect: 'fade',    // Closing animation
-//   autoplayVideos: false,  // Disable autoplay for videos
-//   keyboardNavigation: true, // Enable navigation using the keyboard
-// });
-const lightbox = GLightbox({
-  openEffect: 'zoom',   // Options: 'zoom', 'fade', 'none'
-  closeEffect: 'fade',  // Options: 'zoom', 'fade', 'none'
-  slideEffect: 'slide', // Options: 'slide', 'fade', 'none'
-  zoomable: true,       // Enable zoom on images
-});
-       </script>
-    <script src="script.js"></script>
-    <script>
-  AOS.init();
-</script>
+  <script>
+    //         const lightbox = GLightbox({
+    //   touchNavigation: true,  // Enable swipe gestures
+    //   loop: true,             // Loop through gallery items
+    //   zoomable: true,         // Allow zooming on images
+    //   openEffect: 'fade',     // Opening animation ('zoom', 'fade', 'none')
+    //   closeEffect: 'fade',    // Closing animation
+    //   autoplayVideos: false,  // Disable autoplay for videos
+    //   keyboardNavigation: true, // Enable navigation using the keyboard
+    // });
+    const lightbox = GLightbox({
+      openEffect: 'zoom',   // Options: 'zoom', 'fade', 'none'
+      closeEffect: 'fade',  // Options: 'zoom', 'fade', 'none'
+      slideEffect: 'slide', // Options: 'slide', 'fade', 'none'
+      zoomable: true,       // Enable zoom on images
+    });
+  </script>
+  <script src="script.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
+
 </html>
