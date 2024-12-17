@@ -7,6 +7,7 @@
     list-style: none;
     box-sizing: border-box;
     text-decoration: none;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -268,7 +269,7 @@ button {
 }
 
 #enquiry button {
-    background-color: #2a2824;
+    /* background-color: #2a2824; */
     color: var(--quaternary-color);
     cursor: pointer;
     margin-top: 20px;
@@ -330,8 +331,7 @@ button {
     align-items: center; 
     flex-direction: column;
 }
-#subscription input,
-button {
+#subscription input {
 
     /* width: 350px; */
     border-radius: 0;
@@ -347,13 +347,13 @@ button {
     border: 1px solid;
 }
 
-#subscription button:hover {
+/* #subscription button:hover {
     color: #1c1c1c;
     background-color: #ff6d00;
-}
+} */
 
 
-#subs-btn {
+/* #subs-btn {
     background-color: #2a2824;
     color: var(--quaternary-color);
     cursor: pointer;
@@ -366,7 +366,7 @@ button {
 
 
 
-}
+} */
 
 #subs-input {
     display: flex;
@@ -415,6 +415,7 @@ button {
     align-items: center;
     gap: 20vw;
     margin: 10vh 0;
+    scroll-margin-top: 20px;
 }
 
 .equipeach p {
@@ -488,38 +489,6 @@ h5 {
     padding: 2px;
 
 
-
-
-}
-
-/* media queries */
-/* Larger screens  above 1200px*/
-@media (min-width: 1200px) {
-    body {
-        font-size: 1.3rem;
-    }
-
-    #menu {
-        display: flex !important;
-    }
-
-    #menu-icon,
-    #close-icon {
-        display: none;
-    }
-
-    #home {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 50px;
-    }
-
-    /* contact */
-    .con-text p {
-        text-align: center;
-        font: size 1.4rem;
-    }
 
 
 }
@@ -694,3 +663,305 @@ h5 {
     }
 
 }
+
+
+
+/* //Responsive web design
+@media (min-width: 1200px) 
+{
+    #aboutus
+    {
+        height:90vh;
+    }
+} */
+
+
+
+
+
+
+
+/* media queries */
+/* Larger screens  above 1200px*/
+@media (min-width: 1200px) {
+    body {
+        font-size: 1.3rem;
+    }
+
+    #menu {
+        display: flex !important;
+    }
+
+    #menu-icon,
+    #close-icon {
+        display: none;
+    }
+    .error-message {
+        color: red;
+        font-size: 13px;
+        margin-top: 5px;
+        font-family: var(--secondary-font);
+    }
+    #home {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+    }
+
+    /* contact */
+    .con-text p {
+        text-align: center;
+        font: size 1.4rem;
+    }
+    /* #aboutus
+    {
+        /* height: calc(100vh - 20px); */
+        
+    */
+    #aboutus h2 {
+        font-size:3rem;
+        margin-bottom:7vh;
+    
+    }
+    .about-text {
+    font-size:1.8rem;
+    margin:0 4vw;
+    text-align:center;
+    
+    }
+
+    .equip-home
+    {
+        font-size:3rem;  
+    }
+    .equip-para
+    {
+        font-size:1.8rem;
+    }
+
+    #contact-text h4
+     {
+        font-size:3rem;
+    
+    }
+    #contact-text p 
+    {
+        font-size:1.4rem;
+    }
+    #social-header {
+        font-size: 2rem;
+    
+    }
+
+
+
+}
+/* Home contact us button*/ 
+.button {
+    font-family: var(--secondary-font);
+    margin: 0 auto;
+    line-height: 1;
+    text-decoration: none;
+    display: inline-flex;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: var(--clr);
+    /* color: #fff; */
+    border-radius: 10rem;
+    /* font-weight: 600; */
+    padding: 0.75rem 1rem;
+    /* padding-left: 20px; */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: background-color 0.3s;
+    width: 150px;
+    border: 2px solid;
+ font-size: 1rem;
+ 
+  }
+  
+  .button__icon-wrapper {
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    color: var(--clr);
+    background-color: #fff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+  }
+  
+  .button:hover {
+    background-color: #000;
+    color:#fff;
+    border-color: #000;
+  }
+  
+  .button:hover .button__icon-wrapper {
+    color: #000;
+    
+
+  }
+  
+  .button__icon-svg--copy {
+    position: absolute;
+    transform: translate(-150%, 150%);
+  }
+  
+  .button:hover .button__icon-svg:first-child {
+    transition: transform 0.3s ease-in-out;
+    transform: translate(150%, -150%);
+  }
+  
+  .button:hover .button__icon-svg--copy {
+    transition: transform 0.3s ease-in-out 0.1s;
+    transform: translate(0);
+  }
+  
+
+
+  /* equipments button */
+.button1 {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 1px solid #4f4f4f;
+    border-radius: 7px;
+    transition: all 0.2s ease-in;
+    position: relative;
+    overflow: hidden;
+    font-size: 16px;
+    cursor: pointer;
+    color: #D4C8B4;
+    z-index: 1;
+    background-color: #2a2824;
+   
+border: 2px solid #3B3333;
+text-align: center;
+  }
+  
+  .button1:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.25);
+    top: 100%;
+    width: 140%;
+    height: 180%;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+  }
+  
+  .button1:after {
+    content: "";
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.45);
+    top: 180%;
+    width: 160%;
+    height: 190%;
+    background-color: #3b3333;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+  }
+  
+  .button1:hover {
+    color: #000;
+    /* border: 1px solid  #d4c8b4; */
+    border: 2px solid #3B3333;
+  }
+  
+  .button1:hover:before {
+    top: -35%;
+    background-color: #D4C8B4;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+  }
+  
+  .button1:hover:after {
+    top: -45%;
+    background-color: #d4c8b4;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+  }
+  /* subscribe button */
+  /* From Uiverse.io by satyamchaudharydev */ 
+.btn-subscribe {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    background-color: none;
+
+  }
+  
+  .btn-subscribe {
+    --primary-color: #111;
+    --hovered-color: #c84747;
+    position: relative;
+    display: flex;
+    font-weight: 600;
+    font-size: 20px;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  
+  .btn-subscribe p {
+    margin: 0 auto;
+    position: relative;
+    font-size: 20px;
+    color: var(--primary-color);
+    background-color: none;
+  }
+  
+  .btn-subscribe::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    left: 0;
+    bottom: -7px;
+    background: var(--hovered-color);
+    height: 2px;
+    transition: 0.3s ease-out;
+  }
+  .btn-subscribe p::before {
+    position: absolute;
+    /*   box-sizing: border-box; */
+    content: "Subscribe";
+    width: 0%;
+    inset: 0;
+    color: var(--hovered-color);
+    overflow: hidden;
+    transition: 0.3s ease-out;
+  }
+  
+  .btn-subscribe:hover::after {
+    width: 100%;
+  }
+  
+  .btn-subscribe:hover p::before {
+    width: 100%;
+  }
+  
+  .btn-subscribe:hover svg {
+    transform: translateX(4px);
+    color: var(--hovered-color);
+  }
+  
+  .btn-subscribe svg {
+    color: var(--primary-color);
+    transition: 0.2s;
+    position: relative;
+    width: 15px;
+    transition-delay: 0.2s;
+  }
+  
