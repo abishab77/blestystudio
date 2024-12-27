@@ -70,7 +70,7 @@ $(document).ready(function () {
 
 
 
-  // Form validation script
+  // Form validation script main
   const form = document.getElementById('subscriptionForm');
   const nameInput = document.getElementById('namesubs');
   const emailInput = document.getElementById('emailsubs');
@@ -105,8 +105,46 @@ $(document).ready(function () {
       }
   });
 
-  // Email validation function
-  function isValidEmail(email) {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return emailRegex.test(email);
-  }
+ // Email validation function
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+// Form validation script footer
+document.addEventListener('DOMContentLoaded', () => {
+    const formFooter = document.getElementById('subscriptionForm-footer');
+    const nameInputFooter = document.getElementById('namesubs-footer');
+    const emailInputFooter = document.getElementById('emailsubs-footer');
+    const nameErrorFooter = document.getElementById('nameError-footer');
+    const emailErrorFooter = document.getElementById('emailError-footer');
+
+    formFooter.addEventListener('submit', function (e) {
+        let valid = true;
+
+        // Clear previous error messages
+        nameErrorFooter.textContent = '';
+        emailErrorFooter.textContent = '';
+
+        // Validate name field
+        if (nameInputFooter.value.trim() === '') {
+            nameErrorFooter.textContent = '*Name is required';
+            valid = false;
+        }
+
+        // Validate email field
+        if (emailInputFooter.value.trim() === '') {
+            emailErrorFooter.textContent = '*Email is required';
+            valid = false;
+        } else if (!isValidEmail(emailInputFooter.value.trim())) {
+            emailErrorFooter.innerHTML = '*Please enter a valid<br> email address';
+            valid = false;
+        }
+
+        // Prevent form submission if validation fails
+        if (!valid) {
+            e.preventDefault();
+        }
+    });
+});
+
