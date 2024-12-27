@@ -377,6 +377,18 @@ button {
     margin: 30px auto;
 }
 
+/* audio */
+
+#audio
+{
+    padding: 10vh 5vw;
+
+    background-color: var(--quaternary-color);
+    color: var(--tertiary-color);
+    margin: 20px;
+    border-radius: var(--border-b);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
 
 
 
@@ -432,6 +444,26 @@ button {
     text-decoration: none;
      display: inline;
 }
+#equip-ind
+{
+    display: flex;
+}
+#equip-ind article
+{
+    padding: 5vh 2.5vw;
+    width: 100%;
+
+    background-color: var(--quaternary-color);
+    color: var(--tertiary-color);
+    margin: 20px;
+    border-radius: var(--border-b);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+#equip-ind h3
+{
+    font-size: 1.7rem;
+}
+
 /* icons */
 /* Slider Container */
 .slider-container {
