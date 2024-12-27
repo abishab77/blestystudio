@@ -267,12 +267,18 @@ button {
 }
 
 #enquiry button {
-    /* background-color: #2a2824; */
     color: var(--quaternary-color);
     cursor: pointer;
     margin-top: 20px;
 }
-
+.btn-subscribe p
+{
+    display: inline; 
+    text-transform: uppercase
+}
+.btn-subscribe div{
+    margin: 0 auto;
+}
 #followus {
     display: flex;
     justify-content: space-around;
@@ -285,7 +291,7 @@ button {
 }
 
 
-/* about us */
+/* About us */
 #aboutus {
     padding: 10vh 5vw;
     margin: 20px;
@@ -312,14 +318,21 @@ button {
 .hidee {
     display: none;
 }
+.audio-aboutus
+{
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+}
 
 #subscription {
 
     margin: 5px;
     text-align: center;
-    /* display: flex;
-    justify-items: center;
-    align-items: center; */
+
 }
 
 #subscriptionForm
@@ -331,7 +344,6 @@ button {
 }
 #subscription input {
 
-    /* width: 350px; */
     border-radius: 0;
     border: none;
     padding: 5px;
@@ -345,26 +357,7 @@ button {
     border: 1px solid;
 }
 
-/* #subscription button:hover {
-    color: #1c1c1c;
-    background-color: #ff6d00;
-} */
 
-
-/* #subs-btn {
-    background-color: #2a2824;
-    color: var(--quaternary-color);
-    cursor: pointer;
-    margin: 0;
-    border-radius: 0;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-family: var(--primary-font);
-    font-size: 1rem;
-
-
-
-} */
 
 #subs-input {
     display: flex;
@@ -419,7 +412,26 @@ button {
 .equipeach p {
     line-height: 1.5;
 }
-
+.equip-home{
+    text-align: center; 
+    margin-bottom: 10px;
+}
+.equip-para
+{
+    text-align: center;
+}
+.equip-btn
+{
+    display: flex;
+     justify-content: center;
+      align-items: center; 
+      margin-top: 10px;
+}
+.equip-btn a
+{
+    text-decoration: none;
+     display: inline;
+}
 /* icons */
 /* Slider Container */
 .slider-container {
@@ -440,7 +452,7 @@ button {
     display: block;
 }
 
-/* showcase h */
+/* showcase  */
 #showcase-home {
     gap: 10px;
     padding: 10vh 5vw;
@@ -450,6 +462,19 @@ button {
     margin: 20px;
     border-radius: var(--border-b);
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+#showcase-home h2
+{
+    font-size: 3rem;
+    text-align: center;
+}
+ .showcaseHome-img
+{
+    display: flex; justify-content: space-evenly; align-items: center; margin: 10px;
+}
+.showcaseHome-btn
+{
+    display: flex; justify-content: center; align-items: center;
 }
 
 
@@ -465,7 +490,11 @@ footer {
     margin: 2vh 2vw;
     position: relative;
     padding: 2vh 2vw;
-    /* height: 50vh; */
+}
+footer h4
+{
+    text-align: left; text-decoration: underline;
+    text-transform: uppercase;
 }
 #followus-footer {
 
@@ -475,38 +504,68 @@ footer {
     gap: 0px;
     margin: 14px 0px;
 }
-.footer-links
+.footer-links {
+    color: #D4C8B4;
+    text-align: left;
+    text-decoration: none;
+    position: relative;
+    display: block; /* Keeps the block display */
+    padding: 5px 0; /* Adds spacing to make the block links clearer */
+    width: fit-content; /* Ensures the block width matches the text width */
+}
+
+.footer-links::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #fff; /* Underline color */
+    left: 0;
+    bottom: 0; /* Places underline at the bottom of the link */
+    transition: width 0.3s ease-in-out;
+}
+
+.footer-links:hover::after {
+    width: 100%; /* Expands the underline across the text */
+}
+#subscriptionForm-footer
+{
+    width: 100%;
+}
+#subscriptionForm-footer input,button
+{
+width: 100%;
+margin: 5px 0;
+}
+
+#subs-input-footer
+{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    flex-direction: column;
+}
+.footer-reachus
+{
+    display: flex;
+     flex-direction: column;
+      align-items: flex-start;
+}
+.footer-reachus a
 {
     color: #D4C8B4;
-    display: block;
-    text-align: left;
-}
-/* 
-#followus-footer {
-
-    display: flex;
-    justify-content: space-evenly;
-    gap: 0px;
-    margin: 14px 0px;
 }
 
-footer h3,
-h4,
-h5 {
-    margin: 10px 0px;
+.footer-1 p
+{
+    text-align: left; font-size: 1.4rem; margin-top: 10px;
+}
+.footerSubs-btn
+{
+    margin-left:0px; background-color:#ff6d00 ; color: #fff; padding: 0; width: 150px; cursor: pointer; font-family: EB Garamond, serif; font-size: .9rem; width: 100%;
 }
 
-.upper-arrow {
-    position: absolute;
-    right: 30px;
-    bottom: 50px;
 
-    padding: 2px;
-
-
-
-
-} */
 
 /* 768 to 1200 */
 
@@ -678,18 +737,22 @@ h5 {
     }
 
 }
+/* footer media */
 
+@media (max-width: 1024px) {
 
-
-/* //Responsive web design
-@media (min-width: 1200px) 
+footer
 {
-    #aboutus
-    {
-        height:90vh;
-    }
-} */
+    flex-direction: column;
+    align-items: center;
+}
+#copyright
+{
+    display: none;
+}
 
+
+}
 
 
 
@@ -717,6 +780,13 @@ h5 {
         margin-top: 5px;
         font-family: var(--secondary-font);
     }
+    .error-message-footer
+    {
+        color: red;
+        font-size: 11px;
+        margin-top: 2px;
+        font-family: var(--secondary-font);
+    }
     #home {
         display: flex;
         justify-content: space-between;
@@ -729,11 +799,7 @@ h5 {
         text-align: center;
         font: size 1.4rem;
     }
-    /* #aboutus
-    {
-        /* height: calc(100vh - 20px); */
-        
-    */
+   
     #aboutus h2 {
         font-size:3rem;
         margin-bottom:7vh;
@@ -772,6 +838,8 @@ h5 {
 
 
 }
+
+
 /* Home contact us button*/ 
 .button {
     font-family: var(--secondary-font);
@@ -784,11 +852,8 @@ h5 {
     align-items: center;
     gap: 0.75rem;
     background-color: var(--clr);
-    /* color: #fff; */
     border-radius: 10rem;
-    /* font-weight: 600; */
     padding: 0.75rem 1rem;
-    /* padding-left: 20px; */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -892,7 +957,6 @@ text-align: center;
   
   .button1:hover {
     color: #000;
-    /* border: 1px solid  #d4c8b4; */
     border: 2px solid #3B3333;
   }
   
@@ -908,7 +972,6 @@ text-align: center;
     transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
   }
   /* subscribe button */
-  /* From Uiverse.io by satyamchaudharydev */ 
 .btn-subscribe {
     padding: 0;
     margin: 0;
@@ -950,7 +1013,6 @@ text-align: center;
   }
   .btn-subscribe p::before {
     position: absolute;
-    /*   box-sizing: border-box; */
     content: "Subscribe";
     width: 0%;
     inset: 0;
@@ -979,8 +1041,8 @@ text-align: center;
     width: 15px;
     transition-delay: 0.2s;
   }
+
   /* showcase btn */
-  /* From Uiverse.io by ryota1231 */ 
 .animated-button {
     position: relative;
     display: flex;
@@ -990,7 +1052,6 @@ text-align: center;
     border: 4px solid;
     border-color: transparent;
     font-size: 14px;
-    /* background-color: ; */
     border-radius: 100px;
     font-weight: 600;
     color: #111;
@@ -1077,4 +1138,4 @@ text-align: center;
     height: 220px;
     opacity: 1;
   }
-  
+  /* end */
