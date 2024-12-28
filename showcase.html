@@ -18,6 +18,7 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- Include Glightbox CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+  <link rel="stylesheet" href="style.css">
 
   <!-- Include Glightbox JS -->
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
@@ -52,8 +53,10 @@
     }
 
     .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      /* display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
+      display: flex;
+      justify-content: space-around;
 
 
     }
@@ -103,6 +106,46 @@
     .glightbox:hover .overlay {
       opacity: 1;
     }
+
+
+    /* General styling for the gallery */
+.gallery {
+  display: grid;
+  gap: 16px; /* Space between items */
+  padding: 16px;
+  /* Default: Single-column layout for small screens */
+  grid-template-columns: 1fr;
+}
+
+/* Image styling */
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect for images */
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Medium screens (e.g., tablets) */
+@media (min-width: 600px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+  }
+}
+
+/* Large screens (e.g., desktops) */
+@media (min-width: 1024px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+  }
+}
+
   </style>
 
 </head>
@@ -146,10 +189,9 @@
   <section id="showcase">
 
     <div class="gallery">
-      <a href="Testingimg/350200.jpg" class="glightbox"><img src="Testingimg/350200.jpg" alt="Image 1"></a>
-      <a href="Testingimg/400230.jpg" class="glightbox"><img src="Testingimg/400230.jpg" alt="Image 2"></a>
+      <a href="Testingimg/500290.jpg" class="glightbox"><img src="Testingimg/500290.jpg" alt="Image 1"></a>
+      <a href="Testingimg/500290.jpg" class="glightbox"><img src="Testingimg/500290.jpg" alt="Image 2"></a>
       <a href="Testingimg/500290.jpg" class="glightbox"><img src="Testingimg/500290.jpg" alt="Image 3"></a>
-      <!-- <a href="icons/1 (1).jpg" class="glightbox"><img src="icons/1 (1).jpg" alt="Image 1"></a> -->
 
 
     </div>
@@ -160,75 +202,148 @@
         <a href="icons/3 (1).jpg" class="glightbox"><img src="icons/3 (1).jpg" alt="Image 3"></a>
         
       </div>
-      <div class="gallery">
-        <a href="icons/1 (1).jpg" class="glightbox"><img src="icons/1 (1).jpg" alt="Image 1"></a>
-        <a href="icons/2 (1).jpg" class="glightbox"><img src="icons/2 (1).jpg" alt="Image 2"></a>
-        
-        
-      </div> -->
+    
   </section>
-  <a href="Testingimg/350200.jpg" class="glightbox"><img src="Testingimg/350200.jpg" alt="Image 1"></a>
+  <!-- <a href="Testingimg/350200.jpg" class="glightbox"><img src="Testingimg/350200.jpg" alt="Image 1"></a>
   <a href="Testingimg/400230.jpg" class="glightbox"><img src="Testingimg/400230.jpg" alt="Image 2"></a>
-  <a href="Testingimg/500290.jpg" class="glightbox"><img src="Testingimg/500290.jpg" alt="Image 3"></a>
-  <!-- Showcase end -->
+  <a href="Testingimg/500290.jpg" class="glightbox"><img src="Testingimg/500290.jpg" alt="Image 3"></a> -->
+    <!-- Showcase end -->
 
+</section>
 
-  <!-- footer start -->
-  <footer>
-    <div>
-      <h3>BLESTY STUDIO</h3>
-      <h4>DEVELOPED BY DANIEL AND CO</h4>
+    <!-- footer start -->
 
-      <div id="followus-footer">
+    <footer>
+      <div class="footer-1">
+        <h4>BLESTY STUDIO</h4>
+        <p>We are here to inspire musicians and artists<br> to create wonders. Stay
+          updated with the<br> latest news, tips, and insights from the studio.</p>
+        <div class="#copyright">
+          <div style="border-top: 2px solid #D4C8B4; margin-top: 60px; "></div>
+          <h5>Copyright &copy; 2024 BlestyStudio. All Rights Reserved</h5>
+        </div>
+
+      </div>
+
+      <div class="footer-2">
         <div>
-          <p><a target="_blank" href="https://www.instagram.com/blestystudio/"><i class="fa-brands fa-facebook icons"
-                style="color: #D4C8B4;"></i></a> </p>
+          <h4 style=" margin-bottom: 5px;"> Subscribe Here</h4>
 
         </div>
-        <div>
-          <p><a target="_blank" href="https://www.instagram.com/blestystudio/"><i
-                class="fa-brands fa-square-instagram icons" style="color: #D4C8B4;"></i> </a></p>
+        <div id="subs-input-footer">
 
+
+          <form id="subscriptionForm-footer" method="POST" action="subscribe.php" novalidate>
+            <!-- Name Field -->
+            <div>
+              <input type="text" name="name" placeholder="NAME" id="namesubs-footer" required
+                style="font-family: EB Garamond;">
+              <div id="nameError-footer" class="error-message-footer"></div>
+            </div>
+
+            <!-- Email Field -->
+            <div>
+              <input type="email" name="email" placeholder="EMAIL" id="emailsubs-footer" required
+                style="font-family: EB Garamond;">
+              <div id="emailError-footer" class="error-message-footer"></div>
+            </div>
+
+            <button type="submit" class="footerSubs-btn">Subscribe</button>
+
+
+          </form>
         </div>
-        <div>
-          <p><a target="_blank" href="https://www.youtube.com/@blestystudio"><i class="fa-brands fa-youtube icons"
-                style="color: #D4C8B4;"></i></a> </p>
 
+        <div>
+          <h4 style=" text-align: center;">FOLLOW US</h4>
+
+          <div id="followus-footer">
+            <div>
+              <p><a target="_blank" href="https://www.instagram.com/blestystudio/"><i
+                    class="fa-brands fa-facebook icons" style="color: #D4C8B4;"></i></a> </p>
+
+            </div>
+            <div>
+              <p><a target="_blank" href="https://www.instagram.com/blestystudio/"><i
+                    class="fa-brands fa-square-instagram icons" style="color: #D4C8B4;"></i> </a></p>
+
+            </div>
+            <div>
+              <p><a target="_blank" href="https://www.youtube.com/@blestystudio"><i class="fa-brands fa-youtube icons"
+                    style="color: #D4C8B4;"></i></a> </p>
+
+            </div>
+            <div>
+              <p><a target="_blank" href="https://soundcloud.com/blestystudio"><i class="fa-brands fa-soundcloud icons"
+                    style="color: #D4C8B4;"></i></a></p>
+
+            </div>
+          </div>
         </div>
-        <div>
-          <p><a target="_blank" href="https://soundcloud.com/blestystudio"><i class="fa-brands fa-soundcloud icons"
-                style="color: #D4C8B4;"></i></a></p>
 
+      </div>
+
+      </div>
+
+
+      <div class="footer-3">
+        <h4 style="text-align: left; text-decoration: underline;">LINKS</h4>
+        <a href="#home" class="footer-links">Home</a>
+        <a href="showcase.html" class="footer-links">Showcase</a>
+        <a href="assets.html" class="footer-links">Assets</a>
+        <a href="#aboutus" class="footer-links">About Us</a>
+        <a href="#contact" class="footer-links">Contact Us</a>
+      </div>
+
+
+      <div class="footer-4">
+
+        <h4 style="text-align: left; text-decoration: underline;">REACH US</h4>
+        <div class="footer-reachus">
+          <p><i class="fa-solid fa-envelope icons" style="color: #D4C8B4;"></i><span class="email-wrapper"><a
+                target="_blank" href="mailto:blestystudio@gmail.com"
+                class="email-link">blestystudio@gmail.com</a></span></p>
+          <p><i class="fa-solid fa-phone icons" style="color: #D4C8B4;"></i><span class="phone-wrapper"><a
+                target="_blank" href="tel:+919344147330" class="phone-link">+91
+                9344147330</a></span></p>
+
+          <p><i class="fa-solid fa-location-dot icons" style="color: #D4C8B4;"></i><span><a target="_blank"
+                class="phone-link add-link" href="https://maps.app.goo.gl/9jXZB85ckHFoErhw8"> 152/1,
+                Capernaum,<br>
+                Grace Gardens, Keel <br>Krishnapuram,KGF,<br>
+                Oorgaum
+                pet post,<br> Karnataka - 563121 </a></span>
+          </p>
         </div>
       </div>
-      <div style="border-top: 2px solid #D4C8B4; "></div>
-      <h5>Copyright &copy; 2024 BlestyStudio. All Rights Reserved</h5>
-    </div>
-    <a href="#" class="upper-arrow"><i class="fa-solid fa-arrow-turn-up" style="color: #d4c8b4;"></i></a>
 
-  </footer>
-  <!-- footer end -->
-  <script>
-    //         const lightbox = GLightbox({
-    //   touchNavigation: true,  // Enable swipe gestures
-    //   loop: true,             // Loop through gallery items
-    //   zoomable: true,         // Allow zooming on images
-    //   openEffect: 'fade',     // Opening animation ('zoom', 'fade', 'none')
-    //   closeEffect: 'fade',    // Closing animation
-    //   autoplayVideos: false,  // Disable autoplay for videos
-    //   keyboardNavigation: true, // Enable navigation using the keyboard
-    // });
-    const lightbox = GLightbox({
-      openEffect: 'zoom',   // Options: 'zoom', 'fade', 'none'
-      closeEffect: 'fade',  // Options: 'zoom', 'fade', 'none'
-      slideEffect: 'slide', // Options: 'slide', 'fade', 'none'
-      zoomable: true,       // Enable zoom on images
-    });
-  </script>
-  <script src="script.js"></script>
-  <script>
-    AOS.init();
-  </script>
+    </footer>
+    <!-- <div class="#copyright-mobile">
+      <div style="border-top: 2px solid #D4C8B4; margin-top: 60px; "></div>
+      <h5>Copyright &copy; 2024 BlestyStudio. All Rights Reserved</h5>
+  </div> -->
+    <!-- footer end -->
+    <script>
+      //         const lightbox = GLightbox({
+      //   touchNavigation: true,  // Enable swipe gestures
+      //   loop: true,             // Loop through gallery items
+      //   zoomable: true,         // Allow zooming on images
+      //   openEffect: 'fade',     // Opening animation ('zoom', 'fade', 'none')
+      //   closeEffect: 'fade',    // Closing animation
+      //   autoplayVideos: false,  // Disable autoplay for videos
+      //   keyboardNavigation: true, // Enable navigation using the keyboard
+      // });
+      const lightbox = GLightbox({
+        openEffect: 'zoom',   // Options: 'zoom', 'fade', 'none'
+        closeEffect: 'fade',  // Options: 'zoom', 'fade', 'none'
+        slideEffect: 'slide', // Options: 'slide', 'fade', 'none'
+        zoomable: true,       // Enable zoom on images
+      });
+    </script>
+    <script src="script.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 
 </html>
