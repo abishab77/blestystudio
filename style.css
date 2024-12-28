@@ -411,6 +411,16 @@ button {
     align-items: center;
     height: 90vh;
 }
+.equip-div h2
+{
+    font-size: 3rem;
+    text-align: center;
+}
+.equip-div p
+{
+    text-align: center; 
+    font-size: 1.8rem;
+}
 
 .equipeach {
     display: flex;
