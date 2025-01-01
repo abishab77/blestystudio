@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/388a11e813.js" crossorigin="anonymous"></script>
+    <!-- Include Slick Slider CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+
+    <!-- Slick Slider Dependencies -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <!-- Header section -->
+   
+<!-- Header  Start-->
+<header>
+    <section id="header-logo" style="margin-left: 10px
+    ;">
+    <!-- <img src="icons/logo small-11.jpg" alt="logo"  style="display: inline;"> -->
+    <!-- <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><defs><style>.cls-1{fill:#d2c7b3;}.cls-2{fill:#282827;}</style></defs><title>ai file</title><rect class="cls-1" width="20" height="20"/><path class="cls-1" d="M17.2,12.08a7.2,7.2,0,0,1-14.4,0c0-.18,0-.35,0-.53h0V.72H10V4.88A7.2,7.2,0,0,1,17.2,12.08Z"/><path class="cls-2" d="M10,4.88V.72H2.8V11.55h0c0,.18,0,.35,0,.53A7.2,7.2,0,1,0,10,4.88Zm0,10a2.79,2.79,0,0,1-2.79-2.79,2.38,2.38,0,0,1,0-.53A2.79,2.79,0,1,1,10,14.87Z"/><ellipse class="cls-1" cx="4.02" cy="1.91" rx="0.7" ry="0.7" transform="translate(-0.26 0.7) rotate(-9.69)"/><polygon class="cls-1" points="6.37 10.73 5.81 11.29 4.93 10.4 5.07 10.27 3.93 9.13 3.92 9.13 3.92 4.02 4.22 4.02 4.22 8.94 5.31 10.03 5.48 9.85 6.37 10.73"/></svg> -->
+        <h1 style="display: inline;">BLESTY STUDIO</h1>
+
+    </section>
+    <nav>
+
+        <ul id="menu" class="hidden">
+
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" id="close-icon" width="25px" height="25px"
+                style="cursor: pointer; "><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path fill="#e0e0e0"
+                    d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+            </svg>
+            <li class="link-116 "><a href="index.html">Home</a></li>
+            <li class="link-116"><a href="showcase.html">Showcase</a></li>
+            <li class="link-116"><a href="assets.html">Assets</a></li>
+            <li class="link-116"><a href="#">Portfolio</a></li>
+            <li class="link-116"><a href="index.html#aboutus">About Us</a></li>
+            <li class="link-116"><a href="index.html#contact">Contact Us</a></li>
+        </ul>
+        <!-- Menu Icon (Hamburger) -->
+        <i class="fa-solid fa-bars" style="color: #1d150e; cursor: pointer;"  id="menu-icon"></i>
+
+    </nav>
+</header>
+<!-- Header  end-->
+
+    <!-- End Header Section -->
+
+
+
+   <!-- Portfolio start -->
+<section id="portfolio">
+<h1>STUDIO PORTFOLIO</h1>
+<article id="music-container">
+    <div class="music">
+        <p>Daniel</p>
+        <h2>Rainy Day Love</h2>
+
+        <div class="track">
+            <img src="media/play.jpg" class="playBtn" data-track="1">
+            <div id="waveform1"></div>
+        </div>
+    </div>
+
+    <div class="music">
+        <p>Daniel</p>
+        <h2>Untitled</h2>
+
+        <div class="track">
+            <img src="media/play.jpg" class="playBtn" data-track="2">
+            <div id="waveform2"></div>
+        </div>
+    </div>
+</article>
+    
+
+</section>
+
+<script type="module">
+    import WaveSurfer from 'https://cdn.jsdelivr.net/npm/wavesurfer.js@7/dist/wavesurfer.esm.js';
+
+    // Initialize WaveSurfer instances
+    const waveforms = {
+        1: WaveSurfer.create({
+            container: '#waveform1',
+            waveColor: '#ddd',
+            progressColor: '#292927',
+            barWidth: 4,
+            responsive: true,
+            height: 90,
+            barRadius: 4,
+            interact: true,
+            cursorWidth: 2,
+            cursorColor: '#292927',
+        }),
+        2: WaveSurfer.create({
+            container: '#waveform2',
+            waveColor: '#ddd',
+            progressColor: '#292927',
+            barWidth: 4,
+            responsive: true,
+            height: 90,
+            barRadius: 4,
+            interact: true,
+            cursorWidth: 2,
+            cursorColor: '#292927',
+        }),
+    };
+
+    // Load audio files for each player
+    waveforms[1].load('Rainy Day Love.mp3');
+    waveforms[2].load('untitled 2.mp3');
+
+    // Handle play/pause buttons
+    const playButtons = document.querySelectorAll('.playBtn');
+
+    playButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const trackId = button.dataset.track;
+            const currentWaveform = waveforms[trackId];
+
+            // Toggle play/pause
+            currentWaveform.playPause();
+
+            // Update button icon
+            if (button.src.includes('play.jpg')) {
+                button.src = 'media/pause.jpg';
+            } else {
+                button.src = 'media/play.jpg';
+            }
+
+            // Reset other players
+            for (const id in waveforms) {
+                if (id !== trackId) {
+                    waveforms[id].pause();
+                    document.querySelector(`.playBtn[data-track="${id}"]`).src = 'media/play.jpg';
+                }
+            }
+        });
+
+        // Reset button icon when playback finishes
+        const trackId = button.dataset.track;
+        waveforms[trackId].on('finish', () => {
+            button.src = 'media/play.jpg';
+        });
+    });
+</script>
+        
+    <!-- footer start -->
+
+    <footer>
+        <div class="footer-1">
+            <h4>BLESTY STUDIO</h4>
+            <p>We are here to inspire musicians and artists<br> to create wonders. Stay
+                updated with the<br> latest news, tips, and insights from the studio.</p>
+            <div class="#copyright">
+                <div style="border-top: 2px solid #D4C8B4; margin-top: 60px; "></div>
+                <h5>Copyright &copy; 2024 BlestyStudio. All Rights Reserved</h5>
+            </div>
+
+        </div>
+
+        <div class="footer-2">
+            <div>
+                <h4 style=" margin-bottom: 5px;"> Subscribe Here</h4>
+
+            </div>
+            <div id="subs-input-footer">
+
+
+                <form id="subscriptionForm-footer" method="POST" action="subscribe.php" novalidate>
+                    <!-- Name Field -->
+                    <div>
+                        <input type="text" name="name" placeholder="NAME" id="namesubs-footer" required
+                            style="font-family: EB Garamond;">
+                        <div id="nameError-footer" class="error-message-footer"></div>
+                    </div>
+
+                    <!-- Email Field -->
+                    <div>
+                        <input type="email" name="email" placeholder="EMAIL" id="emailsubs-footer" required
+                            style="font-family: EB Garamond;">
+                        <div id="emailError-footer" class="error-message-footer"></div>
+                    </div>
+
+                    <button type="submit" class="footerSubs-btn">Subscribe</button>
+
+
+                </form>
+            </div>
+
+            <div>
+                <h4 style=" text-align: center;">FOLLOW US</h4>
+
+                <div id="followus-footer">
+                    <div>
+                        <p><a target="_blank" href="https://www.instagram.com/blestystudio/"><i
+                                    class="fa-brands fa-facebook icons" style="color: #D4C8B4;"></i></a> </p>
+
+                    </div>
+                    <div>
+                        <p><a target="_blank" href="https://www.instagram.com/blestystudio/"><i
+                                    class="fa-brands fa-square-instagram icons" style="color: #D4C8B4;"></i> </a></p>
+
+                    </div>
+                    <div>
+                        <p><a target="_blank" href="https://www.youtube.com/@blestystudio"><i
+                                    class="fa-brands fa-youtube icons" style="color: #D4C8B4;"></i></a> </p>
+
+                    </div>
+                    <div>
+                        <p><a target="_blank" href="https://soundcloud.com/blestystudio"><i
+                                    class="fa-brands fa-soundcloud icons" style="color: #D4C8B4;"></i></a></p>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        </div>
+
+
+        <div class="footer-3">
+            <h4 style="text-align: left; text-decoration: underline;">LINKS</h4>
+            <a href="index.html" class="footer-links">Home</a>
+            <a href="showcase.html" class="footer-links">Showcase</a>
+            <a href="assets.html" class="footer-links">Assets</a>
+            <a href="#" class="footer-links">Portfolio</a>
+            <a href="index.html#aboutus" class="footer-links">About Us</a>
+            <a href="index.html#contact" class="footer-links">Contact Us</a>
+        </div>
+
+
+        <div class="footer-4">
+
+            <h4 style="text-align: left; text-decoration: underline;">REACH US</h4>
+            <div class="footer-reachus">
+                <p><i class="fa-solid fa-envelope icons" style="color: #D4C8B4;"></i><span class="email-wrapper"><a
+                            target="_blank" href="mailto:blestystudio@gmail.com"
+                            class="email-link">blestystudio@gmail.com</a></span></p>
+                <p><i class="fa-solid fa-phone icons" style="color: #D4C8B4;"></i><span class="phone-wrapper"><a
+                            target="_blank" href="tel:+919344147330" class="phone-link">+91
+                            9344147330</a></span></p>
+
+                <p><i class="fa-solid fa-location-dot icons" style="color: #D4C8B4;"></i><span><a target="_blank"
+                            class="phone-link add-link" href="https://maps.app.goo.gl/9jXZB85ckHFoErhw8"> 152/1,
+                            Capernaum,<br>
+                            Grace Gardens, Keel <br>Krishnapuram,KGF,<br>
+                            Oorgaum
+                            pet post,<br> Karnataka - 563121 </a></span>
+                </p>
+            </div>
+        </div>
+
+    </footer>
+    <!-- <div class="#copyright-mobile">
+        <div style="border-top: 2px solid #D4C8B4; margin-top: 60px; "></div>
+        <h5>Copyright &copy; 2024 BlestyStudio. All Rights Reserved</h5>
+    </div> -->
+    <!-- footer end -->
+
+</body>
+
+</html>
