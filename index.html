@@ -42,6 +42,7 @@
                 <li class="link-116 "><a href="#home">Home</a></li>
                 <li class="link-116"><a href="showcase.html">Showcase</a></li>
                 <li class="link-116"><a href="assets.html">Assets</a></li>
+                <li class="link-116"><a href="portfolio.html">Portfolio</a></li>
                 <li class="link-116"><a href="#aboutus">About Us</a></li>
                 <li class="link-116"><a href="#contact">Contact Us</a></li>
             </ul>
@@ -58,15 +59,26 @@
     <section id="home">
         <article id="slider" data-aos="fade-up">
 
-            <img src="Testingimg/600340.jpg" srcset="Testingimg/400230.jpg 500vw, 
-             Testingimg/500290.jpg 640w, 
-              Testingimg/600340.jpg 1280w" alt="Sample responsive image">
+            <img 
+  src="Testingimg/600340.jpg" 
+  srcset="
+  testtt/350X200.png 500w, 
+  testtt/500X290.png 640w, 
+  testtt/600X340.png 1280w, 
+    testtt/800X450.png 1920w" 
+  sizes="(max-width: 500px) 100vw, 
+         (max-width: 640px) 50vw, 
+         (max-width: 1280px) 75vw, 
+         100vw" 
+  alt="Sample responsive image">
+  
+
 
         </article>
 
         <article id="hometext" data-aos="fade-up">
             <h2>
-                Elevate your music in a space where passion<br> meets precision. Experience unparalleled quality.
+                Elevate your music in a space where passion meets precision. Experience unparalleled quality.
 
             </h2>
 
@@ -122,8 +134,8 @@
 
 
         </div>
-        
-       
+
+
 
         </div>
 
@@ -133,14 +145,61 @@
     <!-- Contact section -->
 
     <section id="contact">
+
+
+        <article data-aos="fade-up" id="enquiry">
+            <h3>Newsletter Subscription</h3>
+            <div id="input-container">
+
+
+
+                <div id="subscription" data-aos="fade-up">
+
+                    <div id="subs-input">
+
+
+                        <form id="subscriptionForm" method="POST" action="subscribe.php" novalidate>
+                            <!-- Name Field -->
+                            <div>
+                                <input type="text" name="name" id="namesubs" placeholder="NAME" required>
+                                <div id="nameError" class="error-message"></div>
+                            </div>
+
+                            <!-- Email Field -->
+                            <div>
+                                <input type="email" name="email" id="emailsubs" placeholder="EMAIL" required>
+                                <div id="emailError" class="error-message"></div>
+                            </div>
+
+
+                            <button type="submit" class="btn-subscribe">
+                                <div>
+                                    <p>Subscribe</p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="4">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                    </svg>
+                                </div>
+                            </button>
+
+                        </form>
+                    </div>
+
+                </div>
+
+
+
+
+        </article>
         <article id="contact-text">
 
             <h4 data-aos="fade-up">Get in Touch</h4>
 
 
             <div class="con-text" data-aos="fade-up">
-                <p>We unlock the full potential of your music. <br>Record, mix, and master in a space where
-                    <br>creativity thrives.
+                <p>We unlock the full potential of your music. Record, mix, and master in a space where
+                    creativity thrives.
                 </p>
             </div>
             <div data-aos="fade-up" id="socials">
@@ -206,52 +265,6 @@
 
 
         </article>
-
-        <article data-aos="fade-up" id="enquiry">
-            <h3>Newsletter Subscription</h3>
-            <div id="input-container">
-
-
-
-                <div id="subscription" data-aos="fade-up">
-
-                    <div id="subs-input">
-
-
-                        <form id="subscriptionForm" method="POST" action="subscribe.php" novalidate>
-                            <!-- Name Field -->
-                            <div>
-                                <input type="text" name="name" id="namesubs" placeholder="NAME" required>
-                                <div id="nameError" class="error-message"></div>
-                            </div>
-
-                            <!-- Email Field -->
-                            <div>
-                                <input type="email" name="email" id="emailsubs" placeholder="EMAIL" required>
-                                <div id="emailError" class="error-message"></div>
-                            </div>
-
-
-                            <button type="submit" class="btn-subscribe">
-                                <div>
-                                    <p>Subscribe</p>
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="4">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                                    </svg>
-                                </div>
-                            </button>
-
-                        </form>
-                    </div>
-
-                </div>
-
-
-
-
-        </article>
     </section>
     <!-- End contact section -->
 
@@ -260,7 +273,8 @@
     <section id="audio">
 
         <div style="margin: 0 auto; ">
-        <h1 style="text-transform: uppercase; margin: 0 auto; text-align: center; font-size: 3rem;">Studio Portfolio</h1>
+            <h1 style="text-transform: uppercase; margin: 0 auto; text-align: center; ">Studio Portfolio
+            </h1>
 
         </div>
         <div class="audio-aboutus ">
@@ -268,15 +282,18 @@
                 <source src="Rainy Day Love.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
-            
+
             <audio controls id="audio2" onplay="pauseOtherAudio('audio2')">
                 <source src="Untitled 2.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
         </div>
+        <div style="  display: flex; justify-content: center; align-items: center;">
+            <button class="btn-portfolio"> <a href="portfolio.html" style="color: unset;">Click here for more</a>
+            </button>
 
+        </div>
 
-        
     </section>
 
     <!-- Assets Start -->
@@ -293,10 +310,10 @@
 
 
 
-            <p class="equip-para" data-aos="fade-up" data-aos-duration="700">At Blesty
+            <p class="equip-para" data-aos="fade-up" data-aos-duration="700" >At Blesty
                 Studio, I believe
-                that great music starts with great equipment.<br>
-                Click here for a detailed look at some of the gear<br> we use to bring your music to life.</p>
+                that great music starts with great equipment.
+                Click here for a detailed look at some of the gear we use to bring your music to life.</p>
 
 
             <div data-aos="fade-up" class="equip-btn">
@@ -331,7 +348,7 @@
 
     <!-- Showcase start -->
     <section id="showcase-home">
-        <h2 data-aos="fade-up">SHOWCASE</h2>
+        <h1 data-aos="fade-up">SHOWCASE</h1>
         <div class="showcaseHome-img" data-aos="fade-up">
 
             <div><img src="icons/1 (1).jpg" alt="img1"></div>
@@ -377,15 +394,15 @@
     <footer>
         <div class="footer-1">
             <h4>BLESTY STUDIO</h4>
-            <p>We are here to inspire musicians and artists<br> to create wonders. Stay
-                updated with the<br> latest news, tips, and insights from the studio.</p>
-            <div class="#copyright">
+            <p>We are here to inspire musicians and artists to create wonders. Stay
+                updated with the latest news, tips, and insights from the studio.</p>
+            <div class="copyright">
                 <div style="border-top: 2px solid #D4C8B4; margin-top: 60px; "></div>
                 <h5>Copyright &copy; 2024 BlestyStudio. All Rights Reserved</h5>
             </div>
 
         </div>
-
+<hr class="footer-line" style="width: 100%;">
         <div class="footer-2">
             <div>
                 <h4 style=" margin-bottom: 5px;"> Subscribe Here</h4>
@@ -414,7 +431,7 @@
 
                 </form>
             </div>
-
+            <!-- <hr class="footer-line" style="width: 100%;"> -->
             <div>
                 <h4 style=" text-align: center;">FOLLOW US</h4>
 
@@ -445,21 +462,22 @@
         </div>
 
         </div>
-
+        <hr class="footer-line" style="width: 100%;">
 
         <div class="footer-3">
             <h4 style="text-align: left; text-decoration: underline;">LINKS</h4>
             <a href="#home" class="footer-links">Home</a>
             <a href="showcase.html" class="footer-links">Showcase</a>
             <a href="assets.html" class="footer-links">Assets</a>
+            <a href="portfolio.html" class="footer-links">Portfolio</a>
             <a href="#aboutus" class="footer-links">About Us</a>
             <a href="#contact" class="footer-links">Contact Us</a>
         </div>
 
-
+<hr class="footer-line" style="width: 100%;">
         <div class="footer-4">
 
-            <h4 style="text-align: left; text-decoration: underline;">REACH US</h4>
+            <h4>REACH US</h4>
             <div class="footer-reachus">
                 <p><i class="fa-solid fa-envelope icons" style="color: #D4C8B4;"></i><span class="email-wrapper"><a
                             target="_blank" href="mailto:blestystudio@gmail.com"
@@ -477,12 +495,12 @@
                 </p>
             </div>
         </div>
-        
+
     </footer>
-    <!-- <div class="#copyright-mobile">
-        <div style="border-top: 2px solid #D4C8B4; margin-top: 60px; "></div>
-        <h5>Copyright &copy; 2024 BlestyStudio. All Rights Reserved</h5>
-    </div> -->
+    <div class="copyright-mobile" >
+        <div class="line" style=" border-top: 2px solid #D4C8B4; margin-top: 60px;" ></div>
+        <h5 style=" color: #D4C8B4; text-align: center;">Copyright &copy; 2024 BlestyStudio. All Rights Reserved</h5>
+    </div>
     <!-- footer end -->
 
     <script src="script.js"></script>
