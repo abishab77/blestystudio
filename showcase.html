@@ -25,127 +25,21 @@
 
 
   <style>
-    #showcase {
-      gap: 10px;
-      padding: 10vh 5vw;
-
-      background-color: var(--quaternary-color);
-      color: var(--tertiary-color);
-      margin: 20px;
-      border-radius: var(--border-b);
-      box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-    }
-
-    .glightbox-container {
-      animation: customFadeIn 0.6s ease-in-out;
-    }
-
-    @keyframes customFadeIn {
-      from {
-        opacity: 0;
-        transform: scale(0.9);
-      }
-
-      to {
-        opacity: 1;
-        transform: scale(1);
+    /* Medium screens (e.g., tablets) */
+    @media (min-width: 600px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        /* Two columns */
       }
     }
 
-    .gallery {
-      /* display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
-      display: flex;
-      justify-content: space-around;
-
-
+    /* Large screens (e.g., desktops) */
+    @media (min-width: 1024px) {
+      .gallery {
+        grid-template-columns: repeat(3, 1fr);
+        /* Three columns */
+      }
     }
-
-    .gallery a {
-      margin: 7px;
-    }
-
-    .gallery img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .gallery img:hover {
-      transform: scale(1.1);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    }
-
-    .glightbox img {
-      transition: transform 0.3s ease, filter 0.3s ease;
-    }
-
-    .glightbox img:hover {
-      transform: scale(1.1);
-      filter: brightness(0.8);
-    }
-
-    .glightbox {
-      position: relative;
-      display: block;
-    }
-
-    .overlay {
-      position: absolute;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.6);
-      color: #fff;
-      width: 100%;
-      padding: 10px;
-      text-align: center;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .glightbox:hover .overlay {
-      opacity: 1;
-    }
-
-
-    /* General styling for the gallery */
-.gallery {
-  display: grid;
-  gap: 16px; /* Space between items */
-  padding: 16px;
-  /* Default: Single-column layout for small screens */
-  grid-template-columns: 1fr;
-}
-
-/* Image styling */
-.gallery img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-/* Hover effect for images */
-.gallery img:hover {
-  transform: scale(1.05);
-}
-
-/* Medium screens (e.g., tablets) */
-@media (min-width: 600px) {
-  .gallery {
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
-  }
-}
-
-/* Large screens (e.g., desktops) */
-@media (min-width: 1024px) {
-  .gallery {
-    grid-template-columns: repeat(3, 1fr); /* Three columns */
-  }
-}
-
   </style>
 
 </head>
@@ -156,7 +50,10 @@
     <section id="header-logo" style="margin-left: 10px
         ;">
 
-      <h1 style="display: inline;">BLESTY STUDIO</h1>
+      <a href="index.html" style="color: unset;">
+        <h1 style="display: inline;">BLESTY STUDIO</h1>
+      </a>
+
 
     </section>
     <nav>
@@ -165,7 +62,7 @@
 
 
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" id="close-icon" width="25px" height="25px"
-          style="cursor: pointer; "><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+          style="cursor: pointer; ">
           <path fill="#e0e0e0"
             d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
         </svg>
@@ -190,162 +87,137 @@
   <section id="showcase">
 
     <div class="gallery">
-      <a href="Testingimg/500290.jpg" class="glightbox"><img src="Testingimg/500290.jpg" alt="Image 1"></a>
-      <a href="Testingimg/500290.jpg" class="glightbox"><img src="Testingimg/500290.jpg" alt="Image 2"></a>
-      <a href="Testingimg/500290.jpg" class="glightbox"><img src="Testingimg/500290.jpg" alt="Image 3"></a>
+      <a href="uad sc-1 (1).png" class="glightbox" data-aos="fade-up"><img src="uad sc-1 (1).png" alt="Image 1"
+          style="width:310px ;height: 464px;"></a>
+      <a href="Testingimg/500290.jpg" class="glightbox" data-aos="fade-up"><img src="Testingimg/500290.jpg"
+          alt="Image 2"></a>
+      <a href="Testingimg/500290.jpg" class="glightbox" data-aos="fade-up"><img src="Testingimg/500290.jpg"
+          alt="Image 3"></a>
 
 
     </div>
-    <!--       
-      <div class="gallery">
-        <a href="icons/1 (1).jpg" class="glightbox"><img src="icons/1 (1).jpg" alt="Image 1"></a>
-        <a href="icons/2 (1).jpg" class="glightbox"><img src="icons/2 (1).jpg" alt="Image 2"></a>
-        <a href="icons/3 (1).jpg" class="glightbox"><img src="icons/3 (1).jpg" alt="Image 3"></a>
-        
-      </div>
-    
+
+
   </section>
-  <!-- <a href="Testingimg/350200.jpg" class="glightbox"><img src="Testingimg/350200.jpg" alt="Image 1"></a>
-  <a href="Testingimg/400230.jpg" class="glightbox"><img src="Testingimg/400230.jpg" alt="Image 2"></a>
-  <a href="Testingimg/500290.jpg" class="glightbox"><img src="Testingimg/500290.jpg" alt="Image 3"></a> -->
-    <!-- Showcase end -->
 
-</section>
+  <!-- footer start -->
 
-    <!-- footer start -->
+  <footer>
+    <div class="footer-1">
+      <h4>BLESTY STUDIO</h4>
+      <p>We are here to inspire musicians and artists to create wonders. Stay
+        updated with the latest news, tips, and insights from the studio.</p>
+      <div class="copyright">
+        <div style="border-top: 2px solid #D4C8B4; margin-top: 60px; "></div>
+        <h5>Copyright &copy; 2024 BlestyStudio. All Rights Reserved</h5>
+      </div>
 
-    <footer>
-      <div class="footer-1">
-          <h4>BLESTY STUDIO</h4>
-          <p>We are here to inspire musicians and artists to create wonders. Stay
-              updated with the latest news, tips, and insights from the studio.</p>
-          <div class="copyright">
-              <div style="border-top: 2px solid #D4C8B4; margin-top: 60px; "></div>
-              <h5>Copyright &copy; 2024 BlestyStudio. All Rights Reserved</h5>
-          </div>
+    </div>
+    <hr class="footer-line" style="width: 100%;">
+    <div class="footer-2">
+      <div>
+        <h4 style=" margin-bottom: 5px;"> Subscribe Here</h4>
 
       </div>
-<hr class="footer-line" style="width: 100%;">
-      <div class="footer-2">
+      <div id="subs-input-footer">
+
+
+        <form id="subscriptionForm-footer" method="POST" action="subscribe.php" novalidate>
+          <!-- Name Field -->
           <div>
-              <h4 style=" margin-bottom: 5px;"> Subscribe Here</h4>
-
+            <input type="text" name="name" placeholder="NAME" id="namesubs-footer" required
+              style="font-family: EB Garamond;">
+            <div id="nameError-footer" class="error-message-footer"></div>
           </div>
-          <div id="subs-input-footer">
 
-
-              <form id="subscriptionForm-footer" method="POST" action="subscribe.php" novalidate>
-                  <!-- Name Field -->
-                  <div>
-                      <input type="text" name="name" placeholder="NAME" id="namesubs-footer" required
-                          style="font-family: EB Garamond;">
-                      <div id="nameError-footer" class="error-message-footer"></div>
-                  </div>
-
-                  <!-- Email Field -->
-                  <div>
-                      <input type="email" name="email" placeholder="EMAIL" id="emailsubs-footer" required
-                          style="font-family: EB Garamond;">
-                      <div id="emailError-footer" class="error-message-footer"></div>
-                  </div>
-
-                  <button type="submit" class="footerSubs-btn">Subscribe</button>
-
-
-              </form>
-          </div>
-          <!-- <hr class="footer-line" style="width: 100%;"> -->
+          <!-- Email Field -->
           <div>
-              <h4 style=" text-align: center;">FOLLOW US</h4>
-
-              <div id="followus-footer">
-                  <div>
-                      <p><a target="_blank" href="https://www.instagram.com/blestystudio/"><i
-                                  class="fa-brands fa-facebook icons" style="color: #D4C8B4;"></i></a> </p>
-
-                  </div>
-                  <div>
-                      <p><a target="_blank" href="https://www.instagram.com/blestystudio/"><i
-                                  class="fa-brands fa-square-instagram icons" style="color: #D4C8B4;"></i> </a></p>
-
-                  </div>
-                  <div>
-                      <p><a target="_blank" href="https://www.youtube.com/@blestystudio"><i
-                                  class="fa-brands fa-youtube icons" style="color: #D4C8B4;"></i></a> </p>
-
-                  </div>
-                  <div>
-                      <p><a target="_blank" href="https://soundcloud.com/blestystudio"><i
-                                  class="fa-brands fa-soundcloud icons" style="color: #D4C8B4;"></i></a></p>
-
-                  </div>
-              </div>
+            <input type="email" name="email" placeholder="EMAIL" id="emailsubs-footer" required
+              style="font-family: EB Garamond;">
+            <div id="emailError-footer" class="error-message-footer"></div>
           </div>
 
+          <button type="submit" class="footerSubs-btn">Subscribe</button>
+
+
+        </form>
       </div>
+      <div>
+        <h4 style=" text-align: center;">FOLLOW US</h4>
 
-      </div>
-      <hr class="footer-line" style="width: 100%;">
+        <div id="followus-footer">
+          <div>
+            <p><a target="_blank" href="https://www.instagram.com/blestystudio/"><i class="fa-brands fa-facebook icons"
+                  style="color: #D4C8B4;"></i></a> </p>
 
-      <div class="footer-3">
-          <h4 style="text-align: left; text-decoration: underline;">LINKS</h4>
-          <a href="#home" class="footer-links">Home</a>
-          <a href="showcase.html" class="footer-links">Showcase</a>
-          <a href="assets.html" class="footer-links">Assets</a>
-          <a href="portfolio.html" class="footer-links">Portfolio</a>
-          <a href="#aboutus" class="footer-links">About Us</a>
-          <a href="#contact" class="footer-links">Contact Us</a>
-      </div>
-
-<hr class="footer-line" style="width: 100%;">
-      <div class="footer-4">
-
-          <h4>REACH US</h4>
-          <div class="footer-reachus">
-              <p><i class="fa-solid fa-envelope icons" style="color: #D4C8B4;"></i><span class="email-wrapper"><a
-                          target="_blank" href="mailto:blestystudio@gmail.com"
-                          class="email-link">blestystudio@gmail.com</a></span></p>
-              <p><i class="fa-solid fa-phone icons" style="color: #D4C8B4;"></i><span class="phone-wrapper"><a
-                          target="_blank" href="tel:+919344147330" class="phone-link">+91
-                          9344147330</a></span></p>
-
-              <p><i class="fa-solid fa-location-dot icons" style="color: #D4C8B4;"></i><span><a target="_blank"
-                          class="phone-link add-link" href="https://maps.app.goo.gl/9jXZB85ckHFoErhw8"> 152/1,
-                          Capernaum,<br>
-                          Grace Gardens, Keel <br>Krishnapuram,KGF,<br>
-                          Oorgaum
-                          pet post,<br> Karnataka - 563121 </a></span>
-              </p>
           </div>
+          <div>
+            <p><a target="_blank" href="https://www.instagram.com/blestystudio/"><i
+                  class="fa-brands fa-square-instagram icons" style="color: #D4C8B4;"></i> </a></p>
+
+          </div>
+          <div>
+            <p><a target="_blank" href="https://www.youtube.com/@blestystudio"><i class="fa-brands fa-youtube icons"
+                  style="color: #D4C8B4;"></i></a> </p>
+
+          </div>
+          <div>
+            <p><a target="_blank" href="https://soundcloud.com/blestystudio"><i class="fa-brands fa-soundcloud icons"
+                  style="color: #D4C8B4;"></i></a></p>
+
+          </div>
+        </div>
       </div>
+
+    </div>
+
+    </div>
+    <hr class="footer-line" style="width: 100%;">
+
+    <div class="footer-3">
+      <h4 style="text-align: left; text-decoration: underline;">LINKS</h4>
+      <a href="index.html#home" class="footer-links">Home</a>
+      <a href="showcase.html" class="footer-links">Showcase</a>
+      <a href="assets.html" class="footer-links">Assets</a>
+      <a href="portfolio.html" class="footer-links">Portfolio</a>
+      <a href="index.html#aboutus" class="footer-links">About Us</a>
+      <a href="index.html#contact" class="footer-links">Contact Us</a>
+    </div>
+
+    <hr class="footer-line" style="width: 100%;">
+    <div class="footer-4">
+
+      <h4>REACH US</h4>
+      <div class="footer-reachus">
+        <p><i class="fa-solid fa-envelope icons" style="color: #D4C8B4;"></i><span class="email-wrapper"><a
+              target="_blank" href="mailto:blestystudio@gmail.com" class="email-link">blestystudio@gmail.com</a></span>
+        </p>
+        <p><i class="fa-solid fa-phone icons" style="color: #D4C8B4;"></i><span class="phone-wrapper"><a target="_blank"
+              href="tel:+919344147330" class="phone-link">+91
+              9344147330</a></span></p>
+
+        <p><i class="fa-solid fa-location-dot icons" style="color: #D4C8B4;"></i><span><a target="_blank"
+              class="phone-link add-link" href="https://maps.app.goo.gl/9jXZB85ckHFoErhw8"> 152/1,
+              Capernaum,<br>
+              Grace Gardens, Keel <br>Krishnapuram,KGF,<br>
+              Oorgaum
+              pet post,<br> Karnataka - 563121 </a></span>
+        </p>
+      </div>
+    </div>
 
   </footer>
-  <div class="copyright-mobile" >
-      <div class="line" style=" border-top: 2px solid #D4C8B4; margin-top: 60px;" ></div>
-      <h5 style=" color: #D4C8B4; text-align: center;">Copyright &copy; 2024 BlestyStudio. All Rights Reserved</h5>
+  <div class="copyright-mobile">
+    <div class="line" style=" border-top: 2px solid #D4C8B4; margin-top: 60px;"></div>
+    <h5 style=" color: #D4C8B4; text-align: center;">Copyright &copy; 2024 BlestyStudio. All Rights Reserved</h5>
   </div>
   <!-- footer end -->
-    <script>
-      //         const lightbox = GLightbox({
-      //   touchNavigation: true,  // Enable swipe gestures
-      //   loop: true,             // Loop through gallery items
-      //   zoomable: true,         // Allow zooming on images
-      //   openEffect: 'fade',     // Opening animation ('zoom', 'fade', 'none')
-      //   closeEffect: 'fade',    // Closing animation
-      //   autoplayVideos: false,  // Disable autoplay for videos
-      //   keyboardNavigation: true, // Enable navigation using the keyboard
-      // });
-      const lightbox = GLightbox({
-        openEffect: 'zoom',   // Options: 'zoom', 'fade', 'none'
-        closeEffect: 'fade',  // Options: 'zoom', 'fade', 'none'
-        slideEffect: 'slide', // Options: 'slide', 'fade', 'none'
-        zoomable: true,       // Enable zoom on images
-      });
-    </script>
-    <script src="script.js"></script>
-    <script>
-      AOS.init();
-    </script>
+  <script src="script.js"></script>
+
+
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>
