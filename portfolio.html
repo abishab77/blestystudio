@@ -30,7 +30,8 @@
     ;">
     <!-- <img src="icons/logo small-11.jpg" alt="logo"  style="display: inline;"> -->
     <!-- <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><defs><style>.cls-1{fill:#d2c7b3;}.cls-2{fill:#282827;}</style></defs><title>ai file</title><rect class="cls-1" width="20" height="20"/><path class="cls-1" d="M17.2,12.08a7.2,7.2,0,0,1-14.4,0c0-.18,0-.35,0-.53h0V.72H10V4.88A7.2,7.2,0,0,1,17.2,12.08Z"/><path class="cls-2" d="M10,4.88V.72H2.8V11.55h0c0,.18,0,.35,0,.53A7.2,7.2,0,1,0,10,4.88Zm0,10a2.79,2.79,0,0,1-2.79-2.79,2.38,2.38,0,0,1,0-.53A2.79,2.79,0,1,1,10,14.87Z"/><ellipse class="cls-1" cx="4.02" cy="1.91" rx="0.7" ry="0.7" transform="translate(-0.26 0.7) rotate(-9.69)"/><polygon class="cls-1" points="6.37 10.73 5.81 11.29 4.93 10.4 5.07 10.27 3.93 9.13 3.92 9.13 3.92 4.02 4.22 4.02 4.22 8.94 5.31 10.03 5.48 9.85 6.37 10.73"/></svg> -->
-        <h1 style="display: inline;">BLESTY STUDIO</h1>
+    <a href="index.html" style="color: unset;"><h1 style="display: inline;">BLESTY STUDIO</h1></a> 
+  
 
     </section>
     <nav>
@@ -66,9 +67,10 @@
 <h1>STUDIO PORTFOLIO</h1>
 <article id="music-container">
     <div class="music">
-        <p>Daniel</p>
         <h2>Rainy Day Love</h2>
 
+        <p>Daniel</p>
+        
         <div class="track">
             <img src="media/play.jpg" class="playBtn" data-track="1">
             <div id="waveform1"></div>
@@ -76,8 +78,9 @@
     </div>
 
     <div class="music">
-        <p>Daniel</p>
         <h2>Untitled</h2>
+        <p>Daniel</p>
+        
 
         <div class="track">
             <img src="media/play.jpg" class="playBtn" data-track="2">
@@ -88,7 +91,7 @@
     
 
 </section>
-
+<script src="script.js"></script>
 <script type="module">
     import WaveSurfer from 'https://cdn.jsdelivr.net/npm/wavesurfer.js@7/dist/wavesurfer.esm.js';
 
@@ -121,8 +124,8 @@
     };
 
     // Load audio files for each player
-    waveforms[1].load('Rainy Day Love.mp3');
-    waveforms[2].load('untitled 2.mp3');
+    waveforms[1].load('media/Rainy Day Love.mp3');
+    waveforms[2].load('media/untitled 2.mp3');
 
     // Handle play/pause buttons
     const playButtons = document.querySelectorAll('.playBtn');
@@ -158,21 +161,20 @@
         });
     });
 </script>
-        
-    <!-- footer start -->
+     <!-- footer start -->
 
-    <footer>
+     <footer>
         <div class="footer-1">
             <h4>BLESTY STUDIO</h4>
-            <p>We are here to inspire musicians and artists<br> to create wonders. Stay
-                updated with the<br> latest news, tips, and insights from the studio.</p>
-            <div class="#copyright">
+            <p>We are here to inspire musicians and artists to create wonders. Stay
+                updated with the latest news, tips, and insights from the studio.</p>
+            <div class="copyright">
                 <div style="border-top: 2px solid #D4C8B4; margin-top: 60px; "></div>
                 <h5>Copyright &copy; 2024 BlestyStudio. All Rights Reserved</h5>
             </div>
 
         </div>
-
+<hr class="footer-line" style="width: 100%;">
         <div class="footer-2">
             <div>
                 <h4 style=" margin-bottom: 5px;"> Subscribe Here</h4>
@@ -201,7 +203,7 @@
 
                 </form>
             </div>
-
+            <!-- <hr class="footer-line" style="width: 100%;"> -->
             <div>
                 <h4 style=" text-align: center;">FOLLOW US</h4>
 
@@ -232,11 +234,11 @@
         </div>
 
         </div>
-
+        <hr class="footer-line" style="width: 100%;">
 
         <div class="footer-3">
             <h4 style="text-align: left; text-decoration: underline;">LINKS</h4>
-            <a href="index.html" class="footer-links">Home</a>
+            <a href="index.html#home" class="footer-links">Home</a>
             <a href="showcase.html" class="footer-links">Showcase</a>
             <a href="assets.html" class="footer-links">Assets</a>
             <a href="#" class="footer-links">Portfolio</a>
@@ -244,10 +246,10 @@
             <a href="index.html#contact" class="footer-links">Contact Us</a>
         </div>
 
-
+<hr class="footer-line" style="width: 100%;">
         <div class="footer-4">
 
-            <h4 style="text-align: left; text-decoration: underline;">REACH US</h4>
+            <h4>REACH US</h4>
             <div class="footer-reachus">
                 <p><i class="fa-solid fa-envelope icons" style="color: #D4C8B4;"></i><span class="email-wrapper"><a
                             target="_blank" href="mailto:blestystudio@gmail.com"
@@ -267,11 +269,12 @@
         </div>
 
     </footer>
-    <!-- <div class="#copyright-mobile">
-        <div style="border-top: 2px solid #D4C8B4; margin-top: 60px; "></div>
-        <h5>Copyright &copy; 2024 BlestyStudio. All Rights Reserved</h5>
-    </div> -->
+    <div class="copyright-mobile" >
+        <div class="line" style=" border-top: 2px solid #D4C8B4; margin-top: 60px;" ></div>
+        <h5 style=" color: #D4C8B4; text-align: center;">Copyright &copy; 2024 BlestyStudio. All Rights Reserved</h5>
+    </div>
     <!-- footer end -->
+
 
 </body>
 
