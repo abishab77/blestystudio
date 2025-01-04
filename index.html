@@ -26,7 +26,9 @@
     <header>
         <section id="header-logo" style="margin-left: 10px
         ;">
-            <h1 style="display: inline;">BLESTY STUDIO</h1>
+            <a href="index.html" style="color: unset;">
+                <h1 style="display: inline;">BLESTY STUDIO</h1>
+            </a>
 
         </section>
         <nav>
@@ -43,7 +45,7 @@
                 <li class="link-116"><a href="showcase.html">Showcase</a></li>
                 <li class="link-116"><a href="assets.html">Assets</a></li>
                 <li class="link-116"><a href="portfolio.html">Portfolio</a></li>
-                <li class="link-116"><a href="#aboutus">About Us</a></li>
+                <li class="link-116"><a href="index.html#aboutus">About Us</a></li>
                 <li class="link-116"><a href="#contact">Contact Us</a></li>
             </ul>
             <!-- Menu Icon (Hamburger) -->
@@ -59,19 +61,15 @@
     <section id="home">
         <article id="slider" data-aos="fade-up">
 
-            <img 
-  src="Testingimg/600340.jpg" 
-  srcset="
+            <img src="Testingimg/600340.jpg" srcset="
   testtt/350X200.png 500w, 
   testtt/500X290.png 640w, 
   testtt/600X340.png 1280w, 
-    testtt/800X450.png 1920w" 
-  sizes="(max-width: 500px) 100vw, 
+    testtt/800X450.png 1920w" sizes="(max-width: 500px) 100vw, 
          (max-width: 640px) 50vw, 
          (max-width: 1280px) 75vw, 
-         100vw" 
-  alt="Sample responsive image">
-  
+         100vw" alt="Sample responsive image">
+
 
 
         </article>
@@ -147,50 +145,91 @@
     <section id="contact">
 
 
-        <article data-aos="fade-up" id="enquiry">
-            <h3>Newsletter Subscription</h3>
-            <div id="input-container">
+        <article data-aos="fade-up" id="enquiry"
+            style="display: flex; flex-direction: column; justify-content: space-around; align-items: center; gap: 50px;">
+
+            <div>
+
+
+                <h3>Newsletter Subscription</h3>
+                <div id="input-container">
 
 
 
-                <div id="subscription" data-aos="fade-up">
+                    <div id="subscription" data-aos="fade-up">
 
-                    <div id="subs-input">
-
-
-                        <form id="subscriptionForm" method="POST" action="subscribe.php" novalidate>
-                            <!-- Name Field -->
-                            <div>
-                                <input type="text" name="name" id="namesubs" placeholder="NAME" required>
-                                <div id="nameError" class="error-message"></div>
-                            </div>
-
-                            <!-- Email Field -->
-                            <div>
-                                <input type="email" name="email" id="emailsubs" placeholder="EMAIL" required>
-                                <div id="emailError" class="error-message"></div>
-                            </div>
+                        <div id="subs-input">
 
 
-                            <button type="submit" class="btn-subscribe">
+                            <form id="subscriptionForm" method="POST" action="subscribe.php" novalidate>
+                                <!-- Name Field -->
                                 <div>
-                                    <p>Subscribe</p>
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="4">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                                    </svg>
+                                    <input type="text" name="name" id="namesubs" placeholder="NAME" required>
+                                    <div id="nameError" class="error-message"></div>
                                 </div>
-                            </button>
 
-                        </form>
+                                <!-- Email Field -->
+                                <div>
+                                    <input type="email" name="email" id="emailsubs" placeholder="EMAIL" required>
+                                    <div id="emailError" class="error-message"></div>
+                                </div>
+
+
+                                <button type="submit" class="btn-subscribe">
+                                    <div>
+                                        <p>Subscribe</p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="4">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M14 5l7 7m0 0l-7 7m7-7H3">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </button>
+
+                            </form>
+                        </div>
                     </div>
+                </div>
+            </div>
 
+
+            <div data-aos="fade-up" class="ssss">
+                <h6 id="social-header">
+                    Follow Us
+                </h6>
+                <div id="followus">
+                    <div>
+                        <p><a target="_blank" href="https://www.instagram.com/blestystudio/"><i
+                                    class="fa-brands fa-facebook icons con" style="color: #1c1c1c;"></i></a>
+                        </p>
+
+                    </div>
+                    <div>
+                        <p><a target="_blank" href="https://www.instagram.com/blestystudio/"><i
+                                    class="fa-brands fa-square-instagram icons con" style="color: #1c1c1c;"></i>
+                            </a>
+                        </p>
+
+                    </div>
+                    <div>
+                        <p><a target="_blank" href="https://www.youtube.com/@blestystudio"><i
+                                    class="fa-brands fa-youtube icons con" style="color: #1c1c1c;"></i></a>
+                        </p>
+
+                    </div>
+                    <div>
+                        <p><a target="_blank" href="https://soundcloud.com/blestystudio"><i
+                                    class="fa-brands fa-soundcloud icons con" style="color: #1c1c1c;"></i></a></p>
+
+                    </div>
                 </div>
 
+            </div>
 
 
 
+            <!--  -->
         </article>
         <article id="contact-text">
 
@@ -206,9 +245,9 @@
 
 
                 <div>
-                    <h6 data-aos="fade-up" id="social-header">Contact Us</h6>
-                    <div data-aos="fade-up">
-                        <p><i class="fa-solid fa-envelope icons" style="color: #1c1c1c;"></i><span
+                    <h6 data-aos="fade-up" id="social-header" style="text-decoration: underline;">Contact Us</h6>
+                    <div data-aos="fade-up" class="contact-links">
+                        <p><i class="fa-solid fa-envelope icons " style="color: #1c1c1c;"></i><span
                                 class="email-wrapper"><a target="_blank" href="mailto:blestystudio@gmail.com"
                                     class="email-link">blestystudio@gmail.com</a></span></p>
                         <p><i class="fa-solid fa-phone icons" style="color: #1c1c1c;"></i><span class="phone-wrapper"><a
@@ -226,30 +265,31 @@
                     </div>
                 </div>
 
-                <div data-aos="fade-up">
-                    <h6 id="social-header">
+                <div data-aos="fade-up" class="follow-1024">
+                    <h6 id="social-header" style="text-decoration: underline;">
                         Follow Us
                     </h6>
                     <div id="followus">
                         <div>
                             <p><a target="_blank" href="https://www.instagram.com/blestystudio/"><i
-                                        class="fa-brands fa-facebook icons" style="color: #1c1c1c;"></i></a> </p>
+                                        class="fa-brands fa-facebook icons con" style="color: #1c1c1c;"></i></a> </p>
 
                         </div>
                         <div>
                             <p><a target="_blank" href="https://www.instagram.com/blestystudio/"><i
-                                        class="fa-brands fa-square-instagram icons" style="color: #1c1c1c;"></i> </a>
+                                        class="fa-brands fa-square-instagram icons con" style="color: #1c1c1c;"></i>
+                                </a>
                             </p>
 
                         </div>
                         <div>
                             <p><a target="_blank" href="https://www.youtube.com/@blestystudio"><i
-                                        class="fa-brands fa-youtube icons" style="color: #1c1c1c;"></i></a> </p>
+                                        class="fa-brands fa-youtube icons con" style="color: #1c1c1c;"></i></a> </p>
 
                         </div>
                         <div>
                             <p><a target="_blank" href="https://soundcloud.com/blestystudio"><i
-                                        class="fa-brands fa-soundcloud icons" style="color: #1c1c1c;"></i></a></p>
+                                        class="fa-brands fa-soundcloud icons con" style="color: #1c1c1c;"></i></a></p>
 
                         </div>
                     </div>
@@ -272,23 +312,23 @@
 
     <section id="audio">
 
-        <div style="margin: 0 auto; ">
+        <div style="margin: 0 auto; " data-aos="fade-up">
             <h1 style="text-transform: uppercase; margin: 0 auto; text-align: center; ">Studio Portfolio
             </h1>
 
         </div>
-        <div class="audio-aboutus ">
+        <div class="audio-aboutus " data-aos="fade-up">
             <audio controls id="audio1" onplay="pauseOtherAudio('audio1')">
-                <source src="Rainy Day Love.mp3" type="audio/mpeg">
+                <source src="media/Rainy Day Love.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
 
             <audio controls id="audio2" onplay="pauseOtherAudio('audio2')">
-                <source src="Untitled 2.mp3" type="audio/mpeg">
+                <source src="media/Untitled 2.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
         </div>
-        <div style="  display: flex; justify-content: center; align-items: center;">
+        <div style="  display: flex; justify-content: center; align-items: center;" data-aos="fade-up">
             <button class="btn-portfolio"> <a href="portfolio.html" style="color: unset;">Click here for more</a>
             </button>
 
@@ -310,7 +350,7 @@
 
 
 
-            <p class="equip-para" data-aos="fade-up" data-aos-duration="700" >At Blesty
+            <p class="equip-para" data-aos="fade-up" data-aos-duration="700">At Blesty
                 Studio, I believe
                 that great music starts with great equipment.
                 Click here for a detailed look at some of the gear we use to bring your music to life.</p>
@@ -351,7 +391,7 @@
         <h1 data-aos="fade-up">SHOWCASE</h1>
         <div class="showcaseHome-img" data-aos="fade-up">
 
-            <div><img src="icons/1 (1).jpg" alt="img1"></div>
+            <div><img src="icons/1 (1).jpg" alt="img1" width="250px"></div>
 
 
         </div>
@@ -402,7 +442,7 @@
             </div>
 
         </div>
-<hr class="footer-line" style="width: 100%;">
+        <hr class="footer-line" style="width: 100%;">
         <div class="footer-2">
             <div>
                 <h4 style=" margin-bottom: 5px;"> Subscribe Here</h4>
@@ -474,7 +514,7 @@
             <a href="#contact" class="footer-links">Contact Us</a>
         </div>
 
-<hr class="footer-line" style="width: 100%;">
+        <hr class="footer-line" style="width: 100%;">
         <div class="footer-4">
 
             <h4>REACH US</h4>
@@ -497,8 +537,8 @@
         </div>
 
     </footer>
-    <div class="copyright-mobile" >
-        <div class="line" style=" border-top: 2px solid #D4C8B4; margin-top: 60px;" ></div>
+    <div class="copyright-mobile">
+        <div class="line" style=" border-top: 2px solid #D4C8B4; margin-top: 60px;"></div>
         <h5 style=" color: #D4C8B4; text-align: center;">Copyright &copy; 2024 BlestyStudio. All Rights Reserved</h5>
     </div>
     <!-- footer end -->
