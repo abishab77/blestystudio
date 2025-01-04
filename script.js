@@ -1,17 +1,21 @@
-// script.js
+
+
+// window.addEventListener("resize", () => {
+//     location.reload();
+//   });
 
 document.addEventListener('DOMContentLoaded', () => {
     const menuIcon = document.getElementById('menu-icon');
     const closeIcon = document.getElementById('close-icon');
     const menu = document.getElementById('menu');
+    let isBelowThreshold = window.innerWidth <= 768;
 
     // Function to open the menu
     const openMenu = () => {
         menu.classList.add('active');
         menuIcon.style.display = 'none';
         closeIcon.style.display = 'block';
-        // Prevent scrolling when menu is open
-        document.body.style.overflow = 'hidden';
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
     };
 
     // Function to close the menu
@@ -19,39 +23,75 @@ document.addEventListener('DOMContentLoaded', () => {
         menu.classList.remove('active');
         menuIcon.style.display = 'block';
         closeIcon.style.display = 'none';
-        // Restore scrolling
-        document.body.style.overflow = 'auto';
+        document.body.style.overflow = 'auto'; // Restore scrolling
     };
 
-    // Event listener for menu icon click
-    menuIcon.addEventListener('click', openMenu);
+    // Function to enable menu functionality below 768px
+    const enableMenuListeners = () => {
+        menuIcon.addEventListener('click', openMenu);
+        closeIcon.addEventListener('click', closeMenu);
 
-    // Event listener for close icon click
-    closeIcon.addEventListener('click', closeMenu);
+        // Close the menu when clicking outside of it
+        document.addEventListener('click', closeOnOutsideClick);
 
-    // Close the menu when clicking outside of it
-    document.addEventListener('click', (event) => {
-        if (!menu.contains(event.target) && !menuIcon.contains(event.target) && !closeIcon.contains(event.target)) {
-            if (menu.classList.contains('active')) {
-                closeMenu();
-            }
+        // Close the menu when a menu link is clicked
+        const menuLinks = document.querySelectorAll('#menu a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+    };
+
+    // Function to disable menu functionality
+    const disableMenuListeners = () => {
+        menuIcon.removeEventListener('click', openMenu);
+        closeIcon.removeEventListener('click', closeMenu);
+        document.removeEventListener('click', closeOnOutsideClick);
+
+        // Remove event listeners from menu links
+        const menuLinks = document.querySelectorAll('#menu a');
+        menuLinks.forEach(link => {
+            link.removeEventListener('click', closeMenu);
+        });
+
+        // Ensure menu is reset
+        closeMenu();
+    };
+
+    // Function to handle clicking outside of the menu
+    const closeOnOutsideClick = (event) => {
+        if (
+            !menu.contains(event.target) &&
+            !menuIcon.contains(event.target) &&
+            !closeIcon.contains(event.target) &&
+            menu.classList.contains('active')
+        ) {
+            closeMenu();
         }
-    });
-function closeMenuu()
-{
-    menu.classList.remove('active');
-        
-        closeIcon.style.display = 'none';
-        // Restore scrolling
-        document.body.style.overflow = 'auto';
-}
-    // Optional: Close the menu when a menu link is clicked (useful for single-page applications)
-    const menuLinks = document.querySelectorAll('#menu a');
-    menuLinks.forEach(link => {
-        link.addEventListener('click', closeMenuu);
-    });
-});
+    };
 
+    // Function to toggle menu functionality based on screen width
+    const handleResize = () => {
+        const isNowBelowThreshold = window.innerWidth <= 769;
+
+        // Only toggle listeners if there's a change in the state
+        if (isNowBelowThreshold !== isBelowThreshold) {
+            if (isNowBelowThreshold) {
+                enableMenuListeners();
+            } else {
+                disableMenuListeners();
+            }
+            isBelowThreshold = isNowBelowThreshold;
+        }
+    };
+
+    // Initialize functionality based on initial screen size
+    if (isBelowThreshold) {
+        enableMenuListeners();
+    }
+
+    // Add resize event listener to dynamically toggle functionality
+    window.addEventListener('resize', handleResize);
+});
 
 //slider
 $(document).ready(function () {
@@ -68,6 +108,13 @@ $(document).ready(function () {
     });
   });
 
+//gallery glightbox
+const lightbox = GLightbox({
+    openEffect: 'zoom',   // Options: 'zoom', 'fade', 'none'
+    closeEffect: 'fade',  // Options: 'zoom', 'fade', 'none'
+    slideEffect: 'slide', // Options: 'slide', 'fade', 'none'
+    zoomable: true,       // Enable zoom on images
+  });
 
 
   // Form validation script main
@@ -147,4 +194,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// audio
+function pauseOtherAudio(currentAudioId) {
+    // Get all audio elements
+    const audios = document.querySelectorAll('audio');
+    
+    // Pause any audio that is not the current one
+    audios.forEach(audio => {
+        if (audio.id !== currentAudioId && !audio.paused) {
+            audio.pause();
+        }
+    });
+}
 
