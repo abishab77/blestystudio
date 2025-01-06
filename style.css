@@ -150,6 +150,7 @@ nav ul li {
 
 #hometext {
     text-align: center;
+
 }
 
 #hometext h2 {
@@ -764,23 +765,37 @@ button {
 
     /* navbar */
     .link-116 a {
-        background-color: var(--secondary-color);
+        /* background-color: var(--secondary-color); */
         color: white;
     }
-
+    .link-116:hover::after {
+        width: 100%;
+        color: #D4C8B4;
+    }
+    
+    .link-116 a:hover {
+        color:#d4c8b4;
+    
+    }
+    nav ul li
+    {
+        background-color: #121212;
+        color: #D4C8B4;
+    }
     nav ul {
         display: none;
+        
         flex-direction: column;
         background-color: #121212;
         position: absolute;
-        top: 20px;
+        top: 0px;
         right: 1px;
         left: 1px;
         width: 100%;
         padding: 10px;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         border-radius: 12px;
-        height: 96%;
+        height: 100%;
         text-align: center;
         z-index: 1000;
         width: 100vw;
@@ -1038,6 +1053,12 @@ button {
     #followus-footer {
         gap: 10px;
     }
+    .footer-4
+    {
+        width: 80%;
+        text-align: left;
+        
+    }
 }
 
 /* Small Devices (Mobile Phones, Landscape) - Up to 768px */
@@ -1052,7 +1073,7 @@ button {
     }
 
     .link-116 a {
-        background-color: var(--secondary-color);
+        /* background-color: var(--secondary-color); */
         color: white;
     }
 
@@ -1068,6 +1089,7 @@ button {
     #hometext h2 {
         font-size: 2.2rem;
         font-weight: 400;
+       
     }
 
     .button1 {
@@ -1079,14 +1101,14 @@ button {
         flex-direction: column;
         background-color: #121212;
         position: absolute;
-        top: 20px;
+        top: 0px;
         right: 1px;
         left: 1px;
         width: 100%;
         padding: 10px;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         border-radius: 12px;
-        height: 96%;
+        height: 100%;
         text-align: center;
         z-index: 1000;
     }
@@ -1252,6 +1274,13 @@ button {
     .ssss {
         display: none;
     }
+    .footer-4
+    {
+        width: 60%;
+        text-align: left;
+        
+    }
+
 }
 
 /* Medium Devices (Tablets and Small Laptops) - 768px to 1024px */
@@ -1422,6 +1451,12 @@ button {
     .equipeach-even {
         flex-direction: column-reverse;
     }
+    .footer-4
+{
+    width: 40%;
+    text-align: left;
+    
+}
 }
 
 /* Large Devices (Desktops, Laptops) - 1024px to 1200px */
@@ -1491,6 +1526,11 @@ button {
         height: 50vh;
         /* height: 90vh; */
     }
+    .footer-4
+{
+    width: 25%;
+    text-align: left;
+}
 
 }
 
@@ -1596,6 +1636,11 @@ button {
     #socials p {
         word-wrap: break-word;
     }
+    .footer-4
+{
+    width: 25%;
+    text-align: left;
+}
 }
 
 @media screen and (min-width: 1600px) {
@@ -1607,6 +1652,11 @@ button {
         font-size: 1.6rem;
     }
 
+    .footer-4
+{
+    width: 25%;
+    text-align: left;
+}
 }
 
 /* //buttonsss */
