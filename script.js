@@ -109,31 +109,86 @@ $(document).ready(function () {
   });
 
   //showcase home
-  $('.center').slick({
+//   $('.center').slick({
+//     centerMode: true,
+//     centerPadding: '60px',
+//     slidesToShow: 3,
+//     responsive: [
+//       {
+//         breakpoint: 768,
+//         settings: {
+//           arrows: false,
+//           centerMode: true,
+//           centerPadding: '40px',
+//           slidesToShow: 3
+//         }
+//       },
+//       {
+//         breakpoint: 480,
+//         settings: {
+//           arrows: false,
+//           centerMode: true,
+//           centerPadding: '40px',
+//           slidesToShow: 1
+//         }
+//       }
+//     ]
+//   });
+
+//showcase in home slider
+$('.center-slick').slick({
     centerMode: true,
-    centerPadding: '60px',
+    centerPadding: '0px',
     slidesToShow: 3,
+    draggable: true,
+    infinite: true,
+    autoplay: true,          // Enable autoplay
+    autoplaySpeed: 3000, 
     responsive: [
       {
-        breakpoint: 768,
+        // Below 1024px
+        breakpoint: 1024,
         settings: {
-          arrows: false,
+          arrows: true,
           centerMode: true,
-          centerPadding: '40px',
+          centerPadding: '0px',
           slidesToShow: 3
         }
       },
       {
-        breakpoint: 480,
+        // Below 768px
+        breakpoint: 768,
         settings: {
-          arrows: false,
+          arrows: true,
           centerMode: true,
-          centerPadding: '40px',
+          centerPadding: '0px', // Adjust padding if needed
           slidesToShow: 1
         }
-      }
+      },
+      {
+        // Below 768px
+        breakpoint: 480,
+        settings: {
+          arrows: true,
+          centerMode: true,
+          centerPadding: '0px', // Adjust padding if needed
+          slidesToShow: 1
+        }
+      },
     ]
   });
+  $('.center-slick').on('afterChange', function (event, slick, currentSlide) {
+    $('.center-slick .slick-slide').css('opacity', '0.5'); // Set low opacity for all slides
+    $('.center-slick .slick-center').css('opacity', '1');  // Set high opacity for the center slide
+  });
+
+  $('.center-slick').on('click', '.slick-slide', function () {
+    const index = $(this).data('slick-index'); // Get the index of the clicked slide
+    $('.center-slick').slick('slickGoTo', index); // Navigate to the clicked slide
+  });
+
+  
+
 //gallery glightbox
 const lightbox = GLightbox({
     openEffect: 'zoom',   // Options: 'zoom', 'fade', 'none'
@@ -234,3 +289,6 @@ function pauseOtherAudio(currentAudioId) {
     });
 }
 
+
+        
+  
