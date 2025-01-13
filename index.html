@@ -90,8 +90,8 @@
                             d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
                     </svg>
                     <li class="link-116 "><a href="#home">Home</a></li>
-                    <li class="link-116"><a href="showcase.html">Showcase</a></li>
                     <li class="link-116"><a href="assets.html">Assets</a></li>
+                    <li class="link-116"><a href="showcase.html">Showcase</a></li>
                     <li class="link-116"><a href="portfolio.html">Portfolio</a></li>
                     <li class="link-116"><a href="index.html#aboutus">About Us</a></li>
                     <li class="link-116"><a href="#contact">Contact Us</a></li>
@@ -583,8 +583,9 @@
         <div class="footer-3">
             <h4 style="text-align: left; text-decoration: underline;">LINKS</h4>
             <a href="#home" class="footer-links">Home</a>
-            <a href="showcase.html" class="footer-links">Showcase</a>
             <a href="assets.html" class="footer-links">Assets</a>
+            <a href="showcase.html" class="footer-links">Showcase</a>
+           
             <a href="portfolio.html" class="footer-links">Portfolio</a>
             <a href="#aboutus" class="footer-links">About Us</a>
             <a href="#contact" class="footer-links">Contact Us</a>
@@ -651,11 +652,11 @@
 
         if (status) {
             if (status === "exists") {
-                alert("Email already exists. You are part of our studio!");
+                alert("Email already exists!");
             } else if (status === "success") {
                 alert("You have successfully subscribed!");
             } else if (status === "error") {
-                alert("There was an error. Please try again.");
+                alert("There was an error. Please try again later.");
             }
 
             // Clear the query parameters from the URL after showing the alert
