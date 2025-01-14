@@ -8,7 +8,7 @@ require 'PHPMailer/src/SMTP.php';
 require 'PHPMailer/src/Exception.php';
 
 // Database credentials
-$host = "127.0.0.1:3306";
+$host = "localhost";
 $dbname = "u377480894_subscription"; // Name of the database you created
 $username = "u377480894_daniel";
 $password = "Danielblesty@5345"; // Default password is blank
