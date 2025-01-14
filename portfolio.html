@@ -187,7 +187,7 @@
     </script>
     <script type="module">
         import WaveSurfer from 'https://cdn.jsdelivr.net/npm/wavesurfer.js@7/dist/wavesurfer.esm.js';
-
+        document.addEventListener('DOMContentLoaded', () => {
         // Initialize WaveSurfer instances
         const waveforms = {
             1: WaveSurfer.create({
@@ -253,6 +253,7 @@
                 button.src = 'media/play.jpg';
             });
         });
+    });
     </script>
     <!-- footer start -->
 
