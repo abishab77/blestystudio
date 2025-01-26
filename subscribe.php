@@ -2,6 +2,10 @@
 // Include PHPMailer library files
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
@@ -11,7 +15,7 @@ require 'PHPMailer/src/Exception.php';
 $host = "localhost";
 $dbname = "u377480894_subscription"; // Name of the database you created
 $username = "u377480894_daniel";
-$password = "Danielblesty@5345"; // Default password is blank
+$password = "Daniel@5435"; // Default password is blank
 
 // Get form data
 $name = $_POST['name'];
