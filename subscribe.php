@@ -1,3 +1,5 @@
+
+
 <?php
 // Include PHPMailer library files
 use PHPMailer\PHPMailer\PHPMailer;
@@ -12,10 +14,15 @@ require 'PHPMailer/src/SMTP.php';
 require 'PHPMailer/src/Exception.php';
 
 // Database credentials
+// $host = "localhost";
+// $dbname = "u377480894_subscription"; // Name of the database you created
+// $username = "u377480894_daniel";
+// $password = "Daniel@5435"; // Default password is blank
+// Database credentials
 $host = "localhost";
 $dbname = "u377480894_subscription"; // Name of the database you created
-$username = "u377480894_daniel";
-$password = "Daniel@5435"; // Default password is blank
+$username = "root";
+$password = ""; // Default password is blank
 
 // Get form data
 $name = $_POST['name'];
