@@ -1,8 +1,8 @@
 
 
-// window.addEventListener("resize", () => {
-//     location.reload();
-//   });
+window.addEventListener("resize", () => {
+    location.reload();
+  });
 
 document.addEventListener('DOMContentLoaded', () => {
     const menuIcon = document.getElementById('menu-icon');
@@ -96,6 +96,19 @@ document.addEventListener('DOMContentLoaded', () => {
 //slider
 $(document).ready(function () {
     $('.slider-container').slick({
+      autoplay: true,
+      autoplaySpeed: 3000, // 3 seconds
+      dots: true,
+      arrows: false, // No navigation arrows
+      pauseOnHover: true, // Pause when the user hovers
+      infinite: true,
+      speed: 500,
+      fade: true, // Smooth fading effect
+      cssEase: 'linear',
+    });
+  });
+$(document).ready(function () {
+    $('.slider-container1').slick({
       autoplay: true,
       autoplaySpeed: 3000, // 3 seconds
       dots: true,
