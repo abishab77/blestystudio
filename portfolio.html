@@ -92,7 +92,7 @@
                 <li class="link-116 "><a href="index.html">Home</a></li>
                 <li class="link-116"><a href="assets.html">Assets</a></li>
                 <li class="link-116"><a href="showcase.html">Showcase</a></li>
-                
+
                 <li class="link-116"><a href="#">Portfolio</a></li>
                 <li class="link-116"><a href="index.html#aboutus">About Us</a></li>
                 <li class="link-116"><a href="index.html#contact">Contact Us</a></li>
@@ -103,6 +103,56 @@
         </nav>
     </header>
     <!-- Header  end-->
+    <!-- start alert -->
+    <div class="notifications-container">
+        <div class="success">
+            <div class="flex">
+
+                <div class="success-prompt-wrap">
+                    <p class="success-prompt-heading">Welcome to Blesty Studio Family
+                        <svg style="display: inline;" class="succes-svg" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </p>
+                    <div class="success-button-container">
+                        <button type="button" class="success-button-main">Okay</button>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- From Uiverse.io by kennyotsu -->
+    <div class="notifications-container1">
+        <div class="error-alert">
+            <div class="flex">
+
+                <div class="error-prompt-container">
+                    <p class="error-prompt-heading">Email already exists! <svg style="display: inline;"
+                            aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg" class="error-svg">
+                            <path clip-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                                fill-rule="evenodd"></path>
+                        </svg>
+                    </p>
+                    <div class="success-button-container">
+                        <button type="button" class="success-button-main">Okay</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- end alert -->
 
     <!-- End Header Section -->
 
@@ -110,9 +160,9 @@
 
     <!-- Portfolio start -->
     <section id="portfolio">
-        <h1 >STUDIO PORTFOLIO</h1>
-        <article id="music-container" >
-            <div class="music" >
+        <h1>STUDIO PORTFOLIO</h1>
+        <article id="music-container">
+            <div class="music">
                 <h2>Rainy Day Love</h2>
 
                 <p>Daniel</p>
@@ -138,11 +188,76 @@
 
     </section>
     <script src="script.js">
-        
+
+
+        // Save the current scroll position before leaving the page
+        window.addEventListener("beforeunload", function () {
+            localStorage.setItem("scrollPosition", window.scrollY);
+        });
+
+        // Restore the scroll position after the page loads
+        window.addEventListener("load", function () {
+            const scrollPosition = localStorage.getItem("scrollPosition");
+            if (scrollPosition) {
+                window.scrollTo(0, parseInt(scrollPosition));
+                localStorage.removeItem("scrollPosition"); // Clear the position after restoring
+            }
+        });
+        // Check if there is a status parameter in the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const status = urlParams.get("status");
+
+        if (status) {
+            if (status === "exists") {
+                const container = document.querySelector('.notifications-container1');
+                const heading = container.querySelector('.error-prompt-heading');
+
+                // Customize the message for "exists"
+                heading.textContent = "Email already exists!";
+                container.style.display = 'block'; // Show the container
+
+                // Add click event to hide the alert
+                const closeButton = container.querySelector('.success-button-main');
+                closeButton.addEventListener('click', () => {
+                    container.style.display = 'none';
+                });
+            } else if (status === "error") {
+                const container = document.querySelector('.notifications-container1');
+                const heading = container.querySelector('.error-prompt-heading');
+
+                // Customize the message for "error"
+                heading.textContent = "There was an error. Please try again later.";
+                container.style.display = 'block'; // Show the container
+
+                // Add click event to hide the alert
+                const closeButton = container.querySelector('.success-button-main');
+                closeButton.addEventListener('click', () => {
+                    container.style.display = 'none';
+                });
+            } else if (status === "success") {
+                const successContainer = document.querySelector('.notifications-container');
+                successContainer.style.display = 'block';
+                const closeButton = successContainer.querySelector('.success-button-main');
+                closeButton.addEventListener('click', () => {
+                    successContainer.style.display = 'none';
+                });
+            }
+
+
+
+            // Clear the query parameters from the URL after showing the alert
+            history.replaceState(null, null, window.location.pathname);
+        }
+        //         const successContainer = document.querySelector('.notifications-container');
+        // const closeButton = successContainer.querySelector('.success-button-main');
+        //   closeButton.addEventListener('click', () => {
+        //     successContainer.style.display = 'none';
+        //   });
         //footer form validation
 
         // Add event listener for form submission
         document.addEventListener("DOMContentLoaded", function () {
+            AOS.init();
             document
                 .getElementById("subscriptionForm-footer")
                 .addEventListener("submit", function (event) {
@@ -188,72 +303,72 @@
     <script type="module">
         import WaveSurfer from 'https://cdn.jsdelivr.net/npm/wavesurfer.js@7/dist/wavesurfer.esm.js';
         document.addEventListener('DOMContentLoaded', () => {
-        // Initialize WaveSurfer instances
-        const waveforms = {
-            1: WaveSurfer.create({
-                container: '#waveform1',
-                waveColor: '#ddd',
-                progressColor: '#292927',
-                barWidth: 4,
-                responsive: true,
-                height: 90,
-                barRadius: 4,
-                interact: true,
-                cursorWidth: 2,
-                cursorColor: '#292927',
-            }),
-            2: WaveSurfer.create({
-                container: '#waveform2',
-                waveColor: '#ddd',
-                progressColor: '#292927',
-                barWidth: 4,
-                responsive: true,
-                height: 90,
-                barRadius: 4,
-                interact: true,
-                cursorWidth: 2,
-                cursorColor: '#292927',
-            }),
-        };
+            // Initialize WaveSurfer instances
+            const waveforms = {
+                1: WaveSurfer.create({
+                    container: '#waveform1',
+                    waveColor: '#ddd',
+                    progressColor: '#292927',
+                    barWidth: 4,
+                    responsive: true,
+                    height: 90,
+                    barRadius: 4,
+                    interact: true,
+                    cursorWidth: 2,
+                    cursorColor: '#292927',
+                }),
+                2: WaveSurfer.create({
+                    container: '#waveform2',
+                    waveColor: '#ddd',
+                    progressColor: '#292927',
+                    barWidth: 4,
+                    responsive: true,
+                    height: 90,
+                    barRadius: 4,
+                    interact: true,
+                    cursorWidth: 2,
+                    cursorColor: '#292927',
+                }),
+            };
 
-        // Load audio files for each player
-        waveforms[1].load('media/Rainy Day Love.mp3');
-        waveforms[2].load('media/untitled_2.mp3');
+            // Load audio files for each player
+            waveforms[1].load('media/Rainy Day Love.mp3');
+            waveforms[2].load('media/untitled_2.mp3');
 
-        // Handle play/pause buttons
-        const playButtons = document.querySelectorAll('.playBtn');
+            // Handle play/pause buttons
+            const playButtons = document.querySelectorAll('.playBtn');
 
-        playButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const trackId = button.dataset.track;
-                const currentWaveform = waveforms[trackId];
+            playButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const trackId = button.dataset.track;
+                    const currentWaveform = waveforms[trackId];
 
-                // Toggle play/pause
-                currentWaveform.playPause();
+                    // Toggle play/pause
+                    currentWaveform.playPause();
 
-                // Update button icon
-                if (button.src.includes('play.jpg')) {
-                    button.src = 'media/pause.jpg';
-                } else {
-                    button.src = 'media/play.jpg';
-                }
-
-                // Reset other players
-                for (const id in waveforms) {
-                    if (id !== trackId) {
-                        waveforms[id].pause();
-                        document.querySelector(`.playBtn[data-track="${id}"]`).src = 'media/play.jpg';
+                    // Update button icon
+                    if (button.src.includes('play.jpg')) {
+                        button.src = 'media/pause.jpg';
+                    } else {
+                        button.src = 'media/play.jpg';
                     }
-                }
-            });
 
-            // Reset button icon when playback finishes
-            const trackId = button.dataset.track;
-            waveforms[trackId].on('finish', () => {
-                button.src = 'media/play.jpg';
+                    // Reset other players
+                    for (const id in waveforms) {
+                        if (id !== trackId) {
+                            waveforms[id].pause();
+                            document.querySelector(`.playBtn[data-track="${id}"]`).src = 'media/play.jpg';
+                        }
+                    }
+                });
+
+                // Reset button icon when playback finishes
+                const trackId = button.dataset.track;
+                waveforms[trackId].on('finish', () => {
+                    button.src = 'media/play.jpg';
+                });
             });
         });
-    });
     </script>
     <!-- footer start -->
 
