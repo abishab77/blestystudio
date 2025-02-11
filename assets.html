@@ -104,6 +104,55 @@
     </nav>
   </header>
   <!-- Header  end-->
+  <!-- start alert -->
+  <div class="notifications-container">
+    <div class="success">
+      <div class="flex">
+
+        <div class="success-prompt-wrap">
+          <p class="success-prompt-heading">Welcome to Blesty Studio Family
+            <svg style="display: inline;" class="succes-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+              fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </p>
+          <div class="success-button-container">
+            <button type="button" class="success-button-main">Okay</button>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- From Uiverse.io by kennyotsu -->
+  <div class="notifications-container1">
+    <div class="error-alert">
+      <div class="flex">
+
+        <div class="error-prompt-container">
+          <p class="error-prompt-heading">Email already exists! <svg style="display: inline;" aria-hidden="true"
+              fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="error-svg">
+              <path clip-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                fill-rule="evenodd"></path>
+            </svg>
+          </p>
+          <div class="success-button-container">
+            <button type="button" class="success-button-main">Okay</button>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- end alert -->
 
   <!-- Start Assets page -->
   <section id="assets">
@@ -670,12 +719,76 @@
   <script src="script.js"></script>
 
   <script>
-    AOS.init();
 
+
+    // Save the current scroll position before leaving the page
+    window.addEventListener("beforeunload", function () {
+      localStorage.setItem("scrollPosition", window.scrollY);
+    });
+
+    // Restore the scroll position after the page loads
+    window.addEventListener("load", function () {
+      const scrollPosition = localStorage.getItem("scrollPosition");
+      if (scrollPosition) {
+        window.scrollTo(0, parseInt(scrollPosition));
+        localStorage.removeItem("scrollPosition"); // Clear the position after restoring
+      }
+    });
+    // Check if there is a status parameter in the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const status = urlParams.get("status");
+
+    if (status) {
+      if (status === "exists") {
+        const container = document.querySelector('.notifications-container1');
+        const heading = container.querySelector('.error-prompt-heading');
+
+        // Customize the message for "exists"
+        heading.textContent = "Email already exists!";
+        container.style.display = 'block'; // Show the container
+
+        // Add click event to hide the alert
+        const closeButton = container.querySelector('.success-button-main');
+        closeButton.addEventListener('click', () => {
+          container.style.display = 'none';
+        });
+      } else if (status === "error") {
+        const container = document.querySelector('.notifications-container1');
+        const heading = container.querySelector('.error-prompt-heading');
+
+        // Customize the message for "error"
+        heading.textContent = "There was an error. Please try again later.";
+        container.style.display = 'block'; // Show the container
+
+        // Add click event to hide the alert
+        const closeButton = container.querySelector('.success-button-main');
+        closeButton.addEventListener('click', () => {
+          container.style.display = 'none';
+        });
+      } else if (status === "success") {
+        const successContainer = document.querySelector('.notifications-container');
+        successContainer.style.display = 'block';
+        const closeButton = successContainer.querySelector('.success-button-main');
+        closeButton.addEventListener('click', () => {
+          successContainer.style.display = 'none';
+        });
+      }
+
+
+
+      // Clear the query parameters from the URL after showing the alert
+      history.replaceState(null, null, window.location.pathname);
+    }
+    //         const successContainer = document.querySelector('.notifications-container');
+    // const closeButton = successContainer.querySelector('.success-button-main');
+    //   closeButton.addEventListener('click', () => {
+    //     successContainer.style.display = 'none';
+    //   });
     //footer form validation
 
     // Add event listener for form submission
     document.addEventListener("DOMContentLoaded", function () {
+      AOS.init();
       document
         .getElementById("subscriptionForm-footer")
         .addEventListener("submit", function (event) {
